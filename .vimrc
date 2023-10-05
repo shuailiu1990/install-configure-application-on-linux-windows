@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/tagbar'
     Plug 'Yggdroot/indentLine'
     Plug 'luochen1990/rainbow'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Syntastic                                                                     
@@ -30,7 +31,7 @@ set number                                 " 在左侧行号
 set nobackup                               " 覆盖文件时不备份
 set cursorline                             " 突出显示当前行
 set ruler                                  " 在右下角显示光标位置的状态行
-set mouse=a                                " 启用鼠标支持
+"set mouse=a                                " 启用鼠标支持
 set laststatus=2                           " 启用状态栏
 "set nocompatible                           " 不兼容 Vi 的设置
 set backspace=indent,eol,start             " 允许使用退格键删除光标前的字符
@@ -50,3 +51,13 @@ set expandtab                              " 将制表符转换为空格,要用 
 set autoindent                             " 自动缩进
 set smartindent                            " 智能缩进
 set wrap                                   " 自动换行
+
+" coc.nvim
+colors ron
+hi Pmenu ctermfg=7 ctermbg=236
+hi PmenuSe1 ctermfg=white ctermbg=32
+hi CocFloatintg ctermfg=black ctermbg=240
+
+" Use <Tab> and <S-Tab> to navigate the completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
