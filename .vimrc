@@ -25,7 +25,13 @@ set autoindent                             " 自动缩进
 set smartindent                            " 智能缩进
 set wrap                                   " 自动换行
 
-"=== Install the plugins of vim
+"===Set colors of vim 
+"colors pablo 
+"colors ron
+colors elflord
+hi CocMenuSel ctermbg=232 
+
+"===Install the plugins of vim
 call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'vim-syntastic/Syntastic'
@@ -50,16 +56,10 @@ let g:syntastic_aggregate_errors=1
 "" I use the pip3 to install pylint                                             
 let g:syntastic_python_checkers=['pylint','python3']
 
-"=== Set rainbow
+"===Set rainbow
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
-"=== Set coc.nvim
-"" Set the colors of floating windows recommanded
-colors ron
-hi Pmenu ctermfg=7 ctermbg=236 
-hi CocFloatintg ctermfg=black ctermbg=red
-hi CocMenuSel ctermbg=109 guibg=#13354A
-
+"===Set coc.nvim
 "" Use <Tab> and <S-Tab> to navigate the completion list
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
