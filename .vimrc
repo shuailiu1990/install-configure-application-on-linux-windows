@@ -1,31 +1,4 @@
-call plug#begin('~/.vim/plugged')
-    Plug 'scrooloose/nerdtree'
-    Plug 'vim-syntastic/Syntastic'
-    Plug 'vim-airline/vim-airline'
-    Plug 'universal-ctags/ctags'
-    Plug 'preservim/tagbar'
-    Plug 'Yggdroot/indentLine'
-    Plug 'luochen1990/rainbow'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
-" Syntastic                                                                     
-set statusline+=%#warningmsg#                                                   
-set statusline+=%{SyntasticStatuslineFlag()}                                    
-set statusline+=%*                                                              
-let g:syntastic_always_populate_loc_list=1                                    
-let g:syntastic_auto_loc_list=1                                               
-let g:syntastic_check_on_open=0                                               
-let g:syntastic_check_on_wq=0
-"" Display checker-name for that error-message                                  
-let g:syntastic_aggregate_errors=1        
-"" I use the pip3 to install pylint                                             
-let g:syntastic_python_checkers=['pylint','python3']
-
-" rainbow
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-
-" set vim
+"=== Set vim
 syntax on                                  " 启用语法高亮
 set number                                 " 在左侧行号
 set nobackup                               " 覆盖文件时不备份
@@ -52,12 +25,41 @@ set autoindent                             " 自动缩进
 set smartindent                            " 智能缩进
 set wrap                                   " 自动换行
 
-" coc.nvim
-colors ron
-hi Pmenu ctermfg=7 ctermbg=236
-hi PmenuSe1 ctermfg=white ctermbg=32
-hi CocFloatintg ctermfg=black ctermbg=240
+"=== Install the plugins of vim
+call plug#begin('~/.vim/plugged')
+    Plug 'scrooloose/nerdtree'
+    Plug 'vim-syntastic/Syntastic'
+    Plug 'vim-airline/vim-airline'
+    Plug 'universal-ctags/ctags'
+    Plug 'preservim/tagbar'
+    Plug 'Yggdroot/indentLine'
+    Plug 'luochen1990/rainbow'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
 
-" Use <Tab> and <S-Tab> to navigate the completion list
+"=== Set Syntastic                                                                     
+set statusline+=%#warningmsg#                                                   
+set statusline+=%{SyntasticStatuslineFlag()}                                    
+set statusline+=%*                                                              
+let g:syntastic_always_populate_loc_list=1                                    
+let g:syntastic_auto_loc_list=1                                               
+let g:syntastic_check_on_open=0                                               
+let g:syntastic_check_on_wq=0
+"" Display checker-name for that error-message                                  
+let g:syntastic_aggregate_errors=1        
+"" I use the pip3 to install pylint                                             
+let g:syntastic_python_checkers=['pylint','python3']
+
+"=== Set rainbow
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+"=== Set coc.nvim
+"" Set the colors of floating windows recommanded
+colors ron
+hi Pmenu ctermfg=7 ctermbg=236 
+hi CocFloatintg ctermfg=black ctermbg=red
+hi CocMenuSel ctermbg=109 guibg=#13354A
+
+"" Use <Tab> and <S-Tab> to navigate the completion list
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
