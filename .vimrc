@@ -34,32 +34,50 @@ hi CocMenuSel ctermbg=232
 "===Install the plugins of vim
 call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
-    Plug 'vim-syntastic/Syntastic'
     Plug 'vim-airline/vim-airline'
     Plug 'universal-ctags/ctags'
     Plug 'preservim/tagbar'
     Plug 'Yggdroot/indentLine'
     Plug 'luochen1990/rainbow'
+    Plug 'dense-analysis/ale'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-"=== Set Syntastic                                                                     
-set statusline+=%#warningmsg#                                                   
-set statusline+=%{SyntasticStatuslineFlag()}                                    
-set statusline+=%*                                                              
-let g:syntastic_always_populate_loc_list=1                                    
-let g:syntastic_auto_loc_list=1                                               
-let g:syntastic_check_on_open=0                                               
-let g:syntastic_check_on_wq=0
-"" Display checker-name for that error-message                                  
-let g:syntastic_aggregate_errors=1        
-"" I use the pip3 to install pylint                                             
-let g:syntastic_python_checkers=['pylint','python3']
+
+"=== Set ale
+" Set checker for python
+let g:ale_linters = {'python': ['pylint']}
+
+" Show number of errors
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+    return l:counts.total == 0 ? 'OK' : printf('%d⨉ %d⚠ ', all_non_errors, all_errors)
+endfunction
+set statusline+=%=
+set statusline+=\ %{LinterStatus()}
+
+" Format error strings
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_warning_str = 'Warning'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+" Show vim windows for the loclist or quickfix items when a file contains warnings or errors,
+let g:ale_open_list = 0
+
 
 "===Set rainbow
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+" Set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1 
+
 
 "===Set coc.nvim
-"" Use <Tab> and <S-Tab> to navigate the completion list
+" Start CoC by default (but Coc is enabled)
+let g:coc_start_at_startup = 1
+
+" Disable Coc auto suggestion in tex file
+autocmd FileType tex let b:coc_suggest_disable = 1
+
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
