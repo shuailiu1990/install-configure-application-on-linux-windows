@@ -1,6 +1,7 @@
 #/bin/bash
 
-#--------    zsh    --------   
+#--------    zsh    --------
+# The reference link: https://phoenixnap.com/kb/install-zsh-ubuntu, https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
 # Install zsh 
 sudo apt update
 sudo apt install zsh-y
