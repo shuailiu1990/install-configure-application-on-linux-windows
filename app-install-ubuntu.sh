@@ -11,38 +11,47 @@ fi
 #--------    zsh    --------
 # The reference link: https://phoenixnap.com/kb/install-zsh-ubuntu, https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
 
-# Input the decision to determine whether ot install zsh in command line 
+# Enter the decision to determine whether ot install zsh in command line 
 read -p "Install zsh? (y/n):" flag_install_zsh 
 
 if [ $flag_install_zsh = "y" ]; then
-    # Input the decision to determine whether ot install zsh from sourcecode in command line 
-    read -p "Install zsh from sourcecode (y/n):" flag_way_install_zsh 
+    # Enter the decision to determine whether ot install zsh from sourcecode in command line 
+    read -p "Install zsh from sourcecode without sudo permission (y/n):" flag_way_install_zsh 
     if [ $flag_way_install_zsh = "y" ]; then 
         # Install zsh from sourcecode
-        wget https://sourceforge.net/projects/zsh/files/latest/download -O ~/download/zsh.tar.gz
+        if [ ! -d ~/download/zsh*.tar.gz ]; then
+            wget https://sourceforge.net/projects/zsh/files/latest/download -O ~/download/zsh.tar.gz
+        fi
+        
         cd ~/download
+        
         if [ ! -d ./zsh ]; then
             mkdir zsh
         fi
+        
         tar -xf zsh.tar.gz -C ./zsh --strip-components 1
         cd ./zsh 
+        
         ./configure --prefix=$HOME/opt
         make 
-        make install 
-        zsh --version 
-        rm -rf zsh* 
-    else:
+        make install
+        
+        # Install oh my zsh
+        rm -rf ~/.oh-my-zsh
+        git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+        # Some configrations need to be written in the file ~/.bash_profile and ~/.bashrc
+    else
         # Install zsh by sudo apt 
         sudo apt update 
         sudo apt install zsh-y 
-        zsh --version 
+        
+        # Set zsh as the default shell
+        chsh -s $(which zsh)
+
+        # Install oh my zsh
+        rm -rf ~/.oh-my-zsh
+        sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     fi
-    
-    # Set zsh as the default shell
-    chsh -s $(which zsh) 
-    
-    # Install oh my zsh
-    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
     
     # Install some plugins of oh my zsh
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
