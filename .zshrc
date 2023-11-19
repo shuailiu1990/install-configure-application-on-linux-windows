@@ -71,11 +71,19 @@ ZSH_THEME="eastwood"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+#plugins=(git 
+#         zsh-autosuggestions
+#         zsh-syntax-highlighting
+#         fast-syntax-highlighting
+#         zsh-autocomplete)
+
 plugins=(git
-       	 zsh-autosuggestions
-	     zsh-syntax-highlighting
+         zsh-autosuggestions
+         zsh-syntax-highlighting
          fast-syntax-highlighting
-         zsh-autocomplete)
+        )
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -104,4 +112,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.proxy-clash-wsl2
+export PATH=~/.local/bin:$PATH
+
+source ~/profile.d/anaconda3.sh
+source ~/profile.d/proxy-clash-wsl2.sh
+
+alias python=$HOME"/opt/anaconda3/bin/python3.11"
+alias jupyter-notebook=$HOME"/opt/anaconda3/bin/jupyter-notebook"
+
+
