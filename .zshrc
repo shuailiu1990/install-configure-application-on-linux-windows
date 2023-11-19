@@ -117,7 +117,7 @@ export PATH=~/.local/bin:$PATH
 source ~/profile.d/anaconda3.sh
 source ~/profile.d/proxy-clash-wsl2.sh
 
-alias python=$HOME"/opt/anaconda3/bin/python3.11"
-alias jupyter-notebook=$HOME"/opt/anaconda3/bin/jupyter-notebook"
+alias python=$HOME/opt/anaconda3/bin/python3.11
+alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook
 
 
