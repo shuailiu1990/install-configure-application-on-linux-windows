@@ -18,7 +18,7 @@ if [ $flag_install_zsh = "y" ]; then
     # Enter the decision to determine whether to install zsh from sourcecode in command line 
     read -p "Install zsh from sourcecode without sudo permission (y/n):" flag_way_install_zsh 
     if [ $flag_way_install_zsh = "y" ]; then 
-        # Install zsh from source. If the source code cannt be downloaded, we can copy them from a computer to the target one 
+        # Install zsh from sourcecode. If the source code cannt be downloaded, we can copy them from a computer to the target one 
         if [ ! -d ~/download/zsh*.tar.gz ]; then
             wget https://sourceforge.net/projects/zsh/files/latest/download -O ~/download/zsh.tar.gz
         fi &&
@@ -81,14 +81,25 @@ fi
 # Install the environment or software that some vim plugins require
 
 # Install ctags which tagbar requires 
-read -p "Install ctags? (y/n):" flag_install_ctags
+read -p "Install universal ctags? (y/n):" flag_install_universal_ctags
 
-if [ $flag_install_vim_plug = "y" ]; then
-    # Enter the decision to determine whether to install ctags from sourcecode in command line 
-    read -p "Install zsh from sourcecode without sudo permission (y/n):" flag_way_install_ctags 
+if [ $flag_install_universal_ctags = "y" ]; then
+    # Enter the decision to determine whether to install universal ctags from sourcecode in command line 
+    read -p "Install ctags from sourcecode without sudo permission (y/n):" flag_way_install_universal_ctags 
     
-    if [ $flag_way_install_zsh = "y" ]; then 
-
+    if [ $flag_way_install_universal_ctags = "y" ]; then
+        if [ ! -d ~/download/zsh*.tar.gz ]; then
+        
+        fi
+        # https://github.com/universal-ctags/ctags
+        git clone https://github.com/universal-ctags/ctags.git &&
+        cd ctags &&
+        ./autogen.sh &&
+        ./configure &&  # use --prefix=/where/you/want to override installation directory, defaults to /usr/local
+         make &&
+         make install # may require extra privileges depending on where to install
+    else:
+        sudo apt install universal-ctags
     fi
 fi
 

@@ -1,0 +1,13 @@
+[wsl2]
+processors=8
+memory=8GB
+swap=8GB
+
+[experimental]
+autoMemoryReclaim=gradual
+dnsTunneling=true
+firewall=true
+autoProxy=true
+sparseVhd=true
+# The above sets in [experimental] will work, only when the set on proxy in .bashrc or .zshrc is commented.
+# Note that for the item sparseVhd=true, the command wsl --manage <distribution> --set-sparse true (<distribution> can be got by the command  wsl -l -v in Power Shell) need to be executed in Power Shell.
