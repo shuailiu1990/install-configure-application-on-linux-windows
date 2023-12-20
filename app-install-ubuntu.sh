@@ -141,7 +141,7 @@ if [ ! which pkg-config 1>/dev/null 2>&1 ]; then
     
     read -p "Install pkg-config (y/n):" flag_install_pkg_config
     if [ $flag_install_pkg_config = "y" ]; then
-        read -p "Install pkg_config from sourcecode without sudo permission (y/n):" flag_way_install_pkg_config_without_sudo
+        read -p "Install pkg-config from sourcecode without sudo permission (y/n):" flag_way_install_pkg_config_without_sudo
         
         if [ $flag_way_install_pkg_config_without_sudo = "y"]; then
             echo dd
@@ -152,6 +152,25 @@ if [ ! which pkg-config 1>/dev/null 2>&1 ]; then
     fi
 else
     echo pkg-config has been installed before!
+fi
+
+# Install libtool 
+if [ ! whereis pkg-config 1>/dev/null 2>&1 ]; then
+    echo libtool is not installed
+    
+    read -p "Install libtool (y/n):" flag_install_libtool
+    if [ $flag_install_libtool = "y" ]; then
+        read -p "Install libtool from sourcecode without sudo permission (y/n):" flag_way_install_libtool_without_sudo
+        
+        if [ $flag_way_install_libtool_without_sudo = "y"]; then
+            echo dd
+        else 
+            sudo apt install libtool 
+        fi
+        echo libtool is installed now!
+    fi
+else
+    echo libtool has been installed before!
 fi
 
 
