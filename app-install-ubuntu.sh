@@ -34,7 +34,8 @@ if [ ! which zsh 1>/dev/null 2>&1 ]; then
             fi &&
             
             tar -xf zsh.tar.gz -C ./zsh --strip-components 1 &&
-            cd ./zsh && 
+            cd ./zsh &&
+            make clean &&
             ./configure --prefix=$HOME/opt/zsh &&
             make && 
             make install 
@@ -52,7 +53,7 @@ if [ ! which zsh 1>/dev/null 2>&1 ]; then
 else
     echo zsh have been installed before!
 fi
-# Note that the configrations on zsh are in the file ~/.zshrc
+# Note that the configrations on zsh are in the file ~/.zshrc. The configrations (e.g., path) in .bashrc need to be copied to .zshrc.
 
 
 #--------    oh my zsh     --------
@@ -216,15 +217,16 @@ read -p "Install vim-plug? (y/n):" flag_install_vim_plug
 
 if [ $flag_install_vim_plug = "y" ]; then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    # Some configrations need to be written in .vimrc
-    # The usage of vim-plug are as follows
-        # Install plugins: enter :PlugInstall in vim
-        # Clean plugins: Firstly, comment the plugin xxx in .vimrc, and then enter :PlugClean xxx in vim
-        # Update plugins: enter :PlugUpdate in vim
-        # Check the changed state of plugins: enter :PlugDiff in vim
-        # Check the state of plugins: enter :PlugStatus in vim
 fi
-
+<<EOF
+Some configrations need to be written in .vimrc
+The usage of vim-plug are as follows
+  Install plugins: enter :PlugInstall in vim
+  Clean plugins: Firstly, comment the plugin xxx in .vimrc, and then enter :PlugClean xxx in vim
+  Update plugins: enter :PlugUpdate in vim
+  Check the changed state of plugins: enter :PlugDiff in vim
+  Check the state of plugins: enter :PlugStatus in vim
+EOF
 
 
 
