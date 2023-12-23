@@ -1,6 +1,5 @@
 # install-configure-in-linux
-Save a shell script to install applications automatically in linux, and back up configure files on vim, zsh and so on, for example, .vimrc, .bashrc. 
+Save shell scripts to install applications automatically in linux, and back up configure files on vim, zsh and so on, for example, .vimrc, .bashrc. 
 ## Content: 
-- dd
-  - ddd
-    - dfdfs
+- Script to install applications automatically in linux
+- Backups of configure files on vim, zsh, etc.
