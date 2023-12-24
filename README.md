@@ -4,4 +4,4 @@ Save shell scripts to install applications automatically in linux, and back up c
 - [Scripts to install applications](#Scripts-to-install-applications)
 - [Backups of configure files on vim, zsh, etc.](#2)
 
-## install applications
+## Scripts to install applications
