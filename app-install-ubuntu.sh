@@ -38,7 +38,8 @@ if [ ! which zsh 1>/dev/null 2>&1 ]; then
             make clean &&
             ./configure --prefix=$HOME/opt/zsh &&
             make && 
-            make install 
+            make install
+            cd ..
             # Some configrations need to be written in the file ~/.bash_profile and ~/.bashrc
         else
             # Install zsh by sudo permission 
@@ -227,6 +228,3 @@ The usage of vim-plug are as follows
   Check the changed state of plugins: enter :PlugDiff in vim
   Check the state of plugins: enter :PlugStatus in vim
 EOF
-
-
-
