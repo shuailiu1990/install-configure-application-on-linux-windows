@@ -5,6 +5,6 @@ Save shell scripts to install applications automatically in linux, and back up c
 - [Backups of configure files](#Backups-of-configure-files)
 
 ## Scripts to install applications
-The script app-install-ubuntu.sh can be used to install applications and their plugins, e.g., zsh, oh my zsh, vim-plug, automatically. 
+The script app-install-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.  
 
 ## Backups of configure files
