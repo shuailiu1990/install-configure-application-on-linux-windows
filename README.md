@@ -2,7 +2,7 @@
 Save shell scripts to install applications automatically in linux, and back up configure files on vim, zsh and so on, for example, .vimrc, .bashrc. 
 ## Content:
 - [Scripts to install applications](#Scripts-to-install-applications)
-  - [app-install-ubuntu.sh](#app-install-ubuntu.sh)
+  - [app-install-ubuntu.sh](#app-install-ubuntu)
 - [Backups of configure files](#Backups-of-configure-files)
   - [.bashrc and .bash_profile](#.bashrc-and-.bash_profile)
   - [.vimrc and .zshrc](#.vimrc-and-.zshrc)
