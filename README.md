@@ -15,7 +15,7 @@ Save shell scripts to install applications automatically in linux, and back up c
 ### Script to install application
 #### Install application in Debian
 The script app-install-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.  
-####### ddd
+###### ddd
 
 ### Backup of configuration file
 #### Configuration of shell
