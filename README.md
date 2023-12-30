@@ -4,7 +4,6 @@ Save shell scripts to install applications automatically in linux, and back up c
 - [Linux](#Linux-1)
   - [Script to install application](#Script-to-install-application)
     - [Install application in Debian](#Install-application-in-Debian)
-      - [ddd]
   - [Backup of configuration file](#Backup-of-configuration-file)
     - [Configuration of shell](#Configuration-of-shell)
     - [VIM](#vim)
@@ -12,24 +11,25 @@ Save shell scripts to install applications automatically in linux, and back up c
 - [Windows](#Windows-2)
   - [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
 
-### Script to install application
-#### Install application in Debian
+### Linux
+#### Script to install application
+##### Install application in Debian
 The script app-install-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.  
-###### ddd
 
-### Backup of configuration file
-#### Configuration of shell
+#### Backup of configuration file
+##### Configuration of shell
 .bashrc and .bashrc_profile are the configuration files of bash on $HOME, and .zshrc are the configuration file of zsh on $HOME.
-#### VIM
+##### VIM
 .vimrc is the configuration file of vim on the directory $HOME.
-#### The path of application
+##### The path of application
 profile.d is a directory including the paths of applications on $HOME. The paths of applications are in the bash files. When you want to add the paths of applications into .bashrc or .zshrc, you can add the following command in to .bashrc or .zshrc
 ```
 source ~/profile.d/xxx.sh
 ```
 where xxx is the name of application.
 
-### Configuration of Windows terminal
+### Windows
+#### Configuration of Windows terminal
 settings.json is the configuration file of Windows terminal on  
 ```
 C:\Users\Username\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
