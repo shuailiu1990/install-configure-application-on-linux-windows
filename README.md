@@ -7,6 +7,7 @@ Save shell scripts to install applications automatically in linux, and back up c
   - [Configuration of shell](#Configuration-of-shell)
   - [VIM](#vim)
   - [The path of application](#The-path-of-application)
+- [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
 
 ### Script to install application
 #### Install application in Debian
@@ -18,8 +19,14 @@ The script app-install-ubuntu.sh can be used to install applications and their p
 #### VIM
 .vimrc is the configuration file of vim on the directory $HOME.
 #### The path of application
-profile.d is a directory including the paths of applications on $HOME. The paths of applications are in the bash files. When you want to add the paths of applications into .bashrc or .zshrc, you can add 
+profile.d is a directory including the paths of applications on $HOME. The paths of applications are in the bash files. When you want to add the paths of applications into .bashrc or .zshrc, you can add the following command in to .bashrc or .zshrc
 ```
 source ~/profile.d/xxx.sh
 ```
-into .bashrc or .zshrc.
+where xxx is the name of application.
+
+### Configuration of Windows terminal
+settings.json is the configuration file of Windows terminal on  
+```
+C:\Users\Username\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+```
