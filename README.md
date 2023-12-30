@@ -7,7 +7,7 @@ Save shell scripts to install applications automatically in linux, and back up c
   - [Backup of configuration file](#Backup-of-configuration-file)
     - [Configuration of shell](#Configuration-of-shell)
     - [VIM](#vim)
-    - [Path of application](#Ppath-of-application)
+    - [Path of application](#Path-of-application)
 - [Windows](#windows)
   - [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
 
