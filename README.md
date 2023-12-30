@@ -21,7 +21,7 @@ The script app-install-ubuntu.sh can be used to install applications and their p
 .bashrc and .bashrc_profile are the configuration files of bash on $HOME, and .zshrc are the configuration file of zsh on $HOME.
 ##### VIM
 .vimrc is the configuration file of vim on $HOME.
-##### The path of application
+##### Path of application
 profile.d is a directory including the paths of applications on $HOME. The paths of applications are in the bash files. When you want to add the paths of applications into .bashrc or .zshrc, you can add the following command in to .bashrc or .zshrc
 ```
 source ~/profile.d/xxx.sh
