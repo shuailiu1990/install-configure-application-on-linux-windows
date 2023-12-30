@@ -1,13 +1,15 @@
 # install-configure-in-linux
 Save shell scripts to install applications automatically in linux, and back up configuration files on vim, zsh and so on, for example, .vimrc, .bashrc. 
 ## Content:
-- [Script to install application](#Script-to-install-application)
-  - [Install application in Debian](#Install-application-in-Debian)
-- [Backup of configuration file](#Backup-of-configuration-file)
-  - [Configuration of shell](#Configuration-of-shell)
-  - [VIM](#vim)
-  - [The path of application](#The-path-of-application)
-- [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
+- [Linux](#Linux-1)
+  - [Script to install application](#Script-to-install-application)
+    - [Install application in Debian](#Install-application-in-Debian)
+  - [Backup of configuration file](#Backup-of-configuration-file)
+    - [Configuration of shell](#Configuration-of-shell)
+    - [VIM](#vim)
+    - [The path of application](#The-path-of-application)
+- [Windows](#Windows-2)
+  - [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
 
 ### Script to install application
 #### Install application in Debian
