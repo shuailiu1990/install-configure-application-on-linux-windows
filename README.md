@@ -10,6 +10,8 @@ Save shell scripts to install applications automatically in linux, and back up c
     - [Path of application](#Path-of-application)
 - [Windows](#windows)
   - [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
+  - [Install WSL2](#Install-WSL2)
+  - [Configuration of WSL2](#Configuration-of-WSL2)
 
 ### Linux
 #### Script to install application
@@ -32,5 +34,9 @@ where xxx is the name of application.
 #### Configuration of Windows terminal
 settings.json is the configuration file of Windows terminal on  
 ```
-C:\Users\Username\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 ```
+#### WSL2
+
+### Configuration of WSL2
+.wslconfig is the configuration file of WSL2. The resource limit of WSL2 on Windows can be set in .wslconfig, e.g., the memory and number of CPU core. The file .wslconfig is on C:\Users\UserName on Windows.
