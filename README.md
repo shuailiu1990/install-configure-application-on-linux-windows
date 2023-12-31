@@ -1,4 +1,4 @@
-# install-configure-in-linux
+# Install Applications and Configure them on Linux and Windows
 Save shell scripts to install applications automatically in linux, and back up configuration files of vim, bash and so on, for example, .vimrc and .bashrc. 
 ## Content:
 - [Linux](#linux)
