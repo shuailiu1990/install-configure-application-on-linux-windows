@@ -2,7 +2,7 @@
 ## Content:
 - [Linux](#linux)
   - [Script to install application](#Script-to-install-application)
-    - [Install application in Debian](#Install-application-in-Debian)
+    - [Install application in Ubuntu](#Install-application-in-Ubuntu)
   - [Backup of configuration file](#Backup-of-configuration-file)
     - [Configuration of shell](#Configuration-of-shell)
     - [VIM](#vim)
@@ -14,8 +14,8 @@
 
 ### Linux
 #### Script to install application
-##### Install application in Debian
-The script app-install-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.  
+##### Install application in Ubuntu
+The script app-install-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Ubuntu, e.g., zsh, oh my zsh, vim-plug.  
 
 #### Backup of configuration file
 ##### Configuration of shell
@@ -36,8 +36,7 @@ settings.json is the configuration file of Windows terminal on
 C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 ```
 #### Install WSL2
-1. 在Windows搜索框中搜索**启用或关闭Windows功能**
-   
+1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
 3. dd
 4. dgb
 #### Configuration of WSL2
