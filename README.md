@@ -36,7 +36,10 @@ settings.json is the configuration file of Windows terminal on
 C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 ```
 #### Install WSL2
-
+1. 在Windows搜索框中搜索**启用或关闭Windows功能**
+   
+3. dd
+4. dgb
 #### Configuration of WSL2
 .wslconfig is the configuration file of WSL2. The resource limit of WSL2 on Windows can be set in .wslconfig, e.g., the memory and number of CPU core. The file .wslconfig is on the following directory on Windows
 ```
