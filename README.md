@@ -9,8 +9,9 @@
     - [Path of application](#Path-of-application)
 - [Windows](#windows)
   - [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
-  - [Install WSL2](#Install-WSL2)
+  - [Install WSL2 and Linux on it](#Install-WSL2-and-Linux-on-it)
   - [Configuration of WSL2](#Configuration-of-WSL2)
+  - [Uninstall WSL2 and Linux on it](#Uninstall-WSL2-and-Linux-on-it)
 
 ### Linux
 #### Script to install application
@@ -70,3 +71,6 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
 ```
 C:\Users\UserName
 ```
+
+#### Uninstall WSL2 and Linux on it
+在Windows的**应用与程序**或**电脑管家软件（例如电脑管家）** 中依次卸载安装Linux发行版和WSL。
