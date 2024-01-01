@@ -45,14 +45,18 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
    ```
 4. Update WSL
    ```
-   wsl&nbsp; --update
+   wsl --update
+   ```
+   or
+   ```
+   wsl --update --pre-release
    ```
    如果更新失败，在Windows更新选项中打开**接收其它Microsoft产品的更新**
-5. Install WSLg
+6. Install WSLg
    ```
    wsl --install
    ```
-6. List all the Linux distributions avaiable
+7. List all the Linux distributions avaiable
    ```
    wsl --list --online
    ```
@@ -60,7 +64,7 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
    ```
    wsl -l -o
    ```
-7. Install a Linux distribution
+8. Install a Linux distribution
    ```
    wsl --install -d xxx
    ```
