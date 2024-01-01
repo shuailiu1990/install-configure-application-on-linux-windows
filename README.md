@@ -77,4 +77,4 @@ C:\Users\UserName
 ```
 
 #### Uninstall WSL2 and Linux on it
-在Windows的**应用与程序**或**电脑管家软件（例如电脑管家）** 中依次卸载安装Linux发行版和WSL。
+在Windows的**应用与程序**或**电脑管家软件（例如电脑管家、联想电脑管家）** 中依次卸载安装Linux发行版和WSL。
