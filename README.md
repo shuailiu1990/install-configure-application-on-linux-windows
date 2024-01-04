@@ -1,10 +1,10 @@
 # Install Applications and Configure them on Linux and Windows
 ## Content:
 - [Linux](#linux)
-  - [Script to install application](#Script-to-install-application)
-    - [Install application in Ubuntu](#Install-application-in-Ubuntu)
-  - [Backup of configuration file](#Backup-of-configuration-file)
-    - [Configuration of shell](#Configuration-of-shell)
+  - [Script to install application](#script-to-install-application)
+    - [Install application in Ubuntu](#install-application-in-Ubuntu)
+  - [Backup of configuration file](#backup-of-configuration-file)
+    - [Configuration of shell](#configuration-of-shell)
     - [VIM](#vim)
     - [Path of application](#Path-of-application)
 - [Windows](#windows)
@@ -12,6 +12,8 @@
   - [Install WSL2 and Linux on it](#Install-WSL2-and-Linux-on-it)
   - [Configuration of WSL2](#Configuration-of-WSL2)
   - [Uninstall WSL2 and Linux on it](#Uninstall-WSL2-and-Linux-on-it)
+- [Application Manual](#Application-Manual)
+  - [Git](#git)
 
 ### Linux
 #### Script to install application
