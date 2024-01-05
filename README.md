@@ -80,3 +80,18 @@ C:\Users\UserName
 
 #### Uninstall WSL2 and Linux on it
 在Windows的**应用与程序**或**电脑管家软件（例如电脑管家、联想电脑管家）** 中依次卸载安装Linux发行版和WSL。
+
+### Application Manual
+#### Git
+##### Add public key into GitHub
+1. ```
+   cd ~/.ssh
+   ```
+if .ssh does not exist, then
+```
+mkdir ~/.ssh
+```
+2. ```
+   ssh-keygen -t rsa -C "youremail@example.com"
+   ```
+where **youremail@example.com** is your email on GitHub. When some information like ** 
