@@ -78,9 +78,21 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
 C:\Users\UserName
 ```
 
-#### Uninstall WSL2 and Linux on it
-在Windows的**应用与程序**或**电脑管家软件（例如电脑管家、联想电脑管家）** 中依次卸载安装Linux发行版和WSL。
-
+#### Uninstall Linux on WSL2
+The Linux distribution is represented by xxx
+1. Open PowerShell
+2.
+```
+wsl --terminate xxx
+```
+3.
+```
+wsl --unregister xxx
+```
+4. Delete all the files on Linux, the files are on
+```
+C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
+```
 ### Application Manual
 #### Git
 I. Add public key into GitHub
