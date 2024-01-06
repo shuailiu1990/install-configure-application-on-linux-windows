@@ -12,7 +12,7 @@ fi
 # The reference link: https://phoenixnap.com/kb/install-zsh-ubuntu, https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
 
 if ! which zsh 1>/dev/null 2>&1; then
-    echo zsh is not installed!
+    echo "\033[31m zsh is not installed! \033[0m"
 
     # Enter the decision to determine whether to install zsh in command line 
     read -p "Install zsh? (y/n):" flag_install_zsh 
@@ -52,7 +52,7 @@ if ! which zsh 1>/dev/null 2>&1; then
         echo zsh is installed successuflly now!
     fi
 else
-    echo zsh have been installed before!
+    echo -e "\033[31m zsh have been installed before! \033[0m"
 fi
 # Note that the configrations on zsh are in the file ~/.zshrc. The configrations (e.g., path) in .bashrc need to be copied to .zshrc.
 
@@ -85,9 +85,9 @@ fi
 #--------    Plugin of oh my zsh     --------
 
 # Enter the decision to determine whether to install plugins of oh my zsh in command line 
-read -p "Install plugins of oh my zsh? (y/n):" flag_install_plugins_oh_my_zsh 
+read -p "Install plugins of oh my zsh? (y/n):" flag_install_plugins_of_oh_my_zsh 
 
-if [ $flag_install_plugins_oh_my_zsh = "y" ]; then
+if [ $flag_install_plugins_of_oh_my_zsh = "y" ]; then
     # Install some plugins of oh my zsh. If the plugins cannot be downloaded, we can copy them from ~/.oh-my-zsh/custom/plugins in a computer to ~/.oh-my-zsh/custom/plugins in the target computer.
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions &&
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
@@ -214,17 +214,14 @@ fi
 #--------    Plugin of vim    --------
 
 # Install the vim plugins manager called vim-plug
-read -p "Install vim-plug? (y/n):" flag_install_vim_plug
+if [ ! -e ~/.vim/autoload/plug.vim ]; then
+    echo "\033[31m The vim plugins manager called vim-plug is not installed! \033[0m"
+    
+    read -p "Install vim-plug? (y/n):" flag_install_vim_plug
 
-if [ $flag_install_vim_plug = "y" ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    if [ $flag_install_vim_plug = "y" ]; then
+        curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    fi
+else
+    echo "\033[31m The vim plugins manager vim-plug has been installed before! \033[0m" 
 fi
-<<EOF
-Some configrations need to be written in .vimrc
-The usage of vim-plug are as follows
-  Install plugins: enter :PlugInstall in vim
-  Clean plugins: Firstly, comment the plugin xxx in .vimrc, and then enter :PlugClean xxx in vim
-  Update plugins: enter :PlugUpdate in vim
-  Check the changed state of plugins: enter :PlugDiff in vim
-  Check the state of plugins: enter :PlugStatus in vim
-EOF
