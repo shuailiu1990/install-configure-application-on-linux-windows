@@ -1,17 +1,19 @@
 # Install Applications and Configure them on Linux and Windows
 ## Content:
 - [Linux](#linux)
-  - [Script to install application](#Script-to-install-application)
-    - [Install application in Ubuntu](#Install-application-in-Ubuntu)
-  - [Backup of configuration file](#Backup-of-configuration-file)
-    - [Configuration of shell](#Configuration-of-shell)
+  - [Script to install application](#script-to-install-application)
+    - [Install application in Ubuntu](#install-application-in-Ubuntu)
+  - [Backup of configuration file](#backup-of-configuration-file)
+    - [Configuration of shell](#configuration-of-shell)
     - [VIM](#vim)
-    - [Path of application](#Path-of-application)
+    - [Path of application](#path-of-application)
 - [Windows](#windows)
-  - [Configuration of Windows terminal](#Configuration-of-Windows-terminal)
-  - [Install WSL2 and Linux on it](#Install-WSL2-and-Linux-on-it)
-  - [Configuration of WSL2](#Configuration-of-WSL2)
-  - [Uninstall WSL2 and Linux on it](#Uninstall-WSL2-and-Linux-on-it)
+  - [Configuration of Windows terminal](#configuration-of-Windows-terminal)
+  - [Install WSL2 and Linux on it](#install-wsl2-and-Linux-on-it)
+  - [Configuration of WSL2](#configuration-of-wsl2)
+  - [Uninstall WSL2 and Linux on it](#uninstall-wsl2-and-linux-on-it)
+- [Application Manual](#application-manual)
+  - [Git](#git)
 
 ### Linux
 #### Script to install application
@@ -45,14 +47,18 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
    ```
 4. Update WSL
    ```
-   wsl&nbsp; --update
+   wsl --update
+   ```
+   or
+   ```
+   wsl --update --pre-release
    ```
    如果更新失败，在Windows更新选项中打开**接收其它Microsoft产品的更新**
-5. Install WSLg
+6. Install WSLg
    ```
    wsl --install
    ```
-6. List all the Linux distributions avaiable
+7. List all the Linux distributions avaiable
    ```
    wsl --list --online
    ```
@@ -60,7 +66,7 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
    ```
    wsl -l -o
    ```
-7. Install a Linux distribution
+8. Install a Linux distribution
    ```
    wsl --install -d xxx
    ```
@@ -73,4 +79,26 @@ C:\Users\UserName
 ```
 
 #### Uninstall WSL2 and Linux on it
-在Windows的**应用与程序**或**电脑管家软件（例如电脑管家）** 中依次卸载安装Linux发行版和WSL。
+在Windows的**应用与程序**或**电脑管家软件（例如电脑管家、联想电脑管家）** 中依次卸载安装Linux发行版和WSL。
+
+### Application Manual
+#### Git
+I. Add public key into GitHub
+1.
+```
+      cd ~/.ssh
+```
+if .ssh does not exist, then
+```
+mkdir ~/.ssh
+```
+2.
+```
+   ssh-keygen -t rsa -C "youremail@example.com"
+```
+where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
+3. 
+```
+vim id_rsa.pub
+```
+and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
