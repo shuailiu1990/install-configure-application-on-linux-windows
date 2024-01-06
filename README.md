@@ -112,6 +112,7 @@ mkdir ~/.ssh
 ssh-keygen -t rsa -C "youremail@example.com"
 ```
 where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
+
 3\. 
 ```
 vim id_rsa.pub
