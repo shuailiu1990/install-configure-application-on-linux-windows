@@ -11,7 +11,7 @@ fi
 #--------    zsh    --------
 # The reference link: https://phoenixnap.com/kb/install-zsh-ubuntu, https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
 
-if [ ! which zsh 1>/dev/null 2>&1 ]; then
+if ! which zsh 1>/dev/null 2>&1; then
     echo zsh is not installed!
 
     # Enter the decision to determine whether to install zsh in command line 
@@ -100,7 +100,7 @@ echo Plugisns of oh my zsh are installed successuflly!
 #--------    Compelling environment  --------
 
 # Install autoconf
-if [ ! which autoconf 1>/dev/null 2>&1 ]; then
+if ! which autoconf 1>/dev/null 2>&1; then
     echo autoconf is not installed
     
     read -p "Install autoconf (y/n):" flag_install_autoconf
@@ -119,7 +119,7 @@ else
 fi
 
 # Install automake
-if [ ! which automake 1>/dev/null 2>&1 ]; then
+if ! which automake 1>/dev/null 2>&1; then
     echo automake is not installed
     
     read -p "Install automake (y/n):" flag_install_automake
@@ -138,7 +138,7 @@ else
 fi
 
 # Install pkg-config
-if [ ! which pkg-config 1>/dev/null 2>&1 ]; then
+if ! which pkg-config 1>/dev/null 2>&1; then
     echo pkg-config is not installed
     
     read -p "Install pkg-config (y/n):" flag_install_pkg_config
@@ -179,7 +179,7 @@ fi
 #--------    Environment or software that some plugins of vim require   --------
 # The link on installing universal ctags from sourcecode is https://github.com/universal-ctags/ctags
 
-if [ ! which ctags 1>/dev/null 2>&1 ]; then
+if ! which ctags 1>/dev/null 2>&1; then
     echo universal ctags is not installed!
     
     # Install universal ctags which tagbar requires 
