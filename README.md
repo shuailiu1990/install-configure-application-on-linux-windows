@@ -39,13 +39,15 @@ settings.json is the configuration file of Windows terminal on
 C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 ```
 #### Install WSL2 and Linux on it
-1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
-2. 以**管理员身份**打开**Windows PowerShell**, 然后依次执行以下3-7步骤
-3. Set default version of WSL to 2, i.e., WSL2
+1\. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
+
+2\. 以**管理员身份**打开**Windows PowerShell**, 然后依次执行以下3-7步骤
+
+3\. Set default version of WSL to 2, i.e., WSL2
    ```
    wsl --set-default-version 2
    ```
-4. Update WSL
+4\. Update WSL
    ```
    wsl --update
    ```
@@ -54,11 +56,11 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
    wsl --update --pre-release
    ```
    如果更新失败，在Windows更新选项中打开**接收其它Microsoft产品的更新**
-6. Install WSLg
+5\. Install WSLg
    ```
    wsl --install
    ```
-7. List all the Linux distributions avaiable
+6\. List all the Linux distributions avaiable
    ```
    wsl --list --online
    ```
@@ -66,7 +68,7 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
    ```
    wsl -l -o
    ```
-8. Install a Linux distribution
+7\. Install a Linux distribution
    ```
    wsl --install -d xxx
    ```
