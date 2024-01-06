@@ -14,6 +14,7 @@
   - [Uninstall WSL2 and Linux on it](#uninstall-wsl2-and-linux-on-it)
 - [Application Manual](#application-manual)
   - [Git](#git)
+    - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
 
 ### Linux
 #### Script to install application
@@ -81,24 +82,24 @@ C:\Users\UserName
 ```
 
 #### Uninstall Linux on WSL2
-The Linux distribution is represented by xxx
-1. Open PowerShell
-2.
+The Linux distribution is represented by **xxx**
+1\. Open PowerShell
+2\.
 ```
 wsl --terminate xxx
 ```
-3.
+3\.
 ```
 wsl --unregister xxx
 ```
-4. Delete all the files on Linux, the files are on
+4\. Delete all the files on Linux, the files are on
 ```
 C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
 ```
 ### Application Manual
 #### Git
-I. Add public key into GitHub
-1.
+##### Add public key on Linux into GitHub
+1\.
 ```
       cd ~/.ssh
 ```
@@ -106,12 +107,12 @@ if .ssh does not exist, then
 ```
 mkdir ~/.ssh
 ```
-2.
+2\.
 ```
    ssh-keygen -t rsa -C "youremail@example.com"
 ```
 where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
-3. 
+3\. 
 ```
 vim id_rsa.pub
 ```
