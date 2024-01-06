@@ -101,7 +101,7 @@ C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
 ##### Add public key on Linux into GitHub
 1\.
 ```
-      cd ~/.ssh
+cd ~/.ssh
 ```
 if .ssh does not exist, then
 ```
@@ -109,7 +109,7 @@ mkdir ~/.ssh
 ```
 2\.
 ```
-   ssh-keygen -t rsa -C "youremail@example.com"
+ssh-keygen -t rsa -C "youremail@example.com"
 ```
 where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
 3\. 
