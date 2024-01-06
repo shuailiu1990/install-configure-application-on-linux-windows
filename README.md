@@ -15,6 +15,7 @@
 - [Application Manual](#application-manual)
   - [Git](#git)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
+  - [Vim-Plug](#vim-plug)
 
 ### Linux
 #### Script to install application
@@ -99,7 +100,7 @@ C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
 ### Application Manual
 #### Git
 ##### Add public key on Linux into GitHub
-1\.
+1.
 ```
 cd ~/.ssh
 ```
@@ -118,3 +119,26 @@ where youremail@example.com is your email on GitHub. When some prompt informatio
 vim id_rsa.pub
 ```
 and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
+#### Vim-Plug
+We input the following commands in vim, and press Enter
+- Install plugins
+```
+:PlugInstall
+```
+- Clean plugins
+  Firstly, comment the plugin xxx in .vimrc, and then enter
+```
+:PlugClean xxx
+```
+- Update plugin
+```
+:PlugUpdate
+```
+- Check the changed state of plugin
+```
+:PlugDiff
+```
+- Check the state of plugin
+```
+:PlugStatus
+```
