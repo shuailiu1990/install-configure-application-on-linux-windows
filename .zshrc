@@ -116,6 +116,7 @@ export PATH=~/.local/bin:$PATH
 
 [ -f ~/profile.d/anaconda3.sh ] && source ~/profile.d/anaconda3.sh
 [ -f ~/profile.d/proxy-clash-wsl2.sh ] && source ~/profile.d/proxy-clash-wsl2.sh
+[ -f ~/profile.d/node.sh ] && source ~/profile.d/node.sh
 
 alias python=$HOME/opt/anaconda3/bin/python3.11
 alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook
