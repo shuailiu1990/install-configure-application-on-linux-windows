@@ -119,6 +119,7 @@ We input the following commands in vim, and press Enter
   ```
   :PlugInstall
   ```
+  All the plugins in .vimrc can be installed with the above command.
 - Clean plugins
   Firstly, comment the plugin xxx in .vimrc, and then enter
   ```
