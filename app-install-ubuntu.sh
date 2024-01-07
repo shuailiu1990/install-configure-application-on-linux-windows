@@ -19,9 +19,16 @@ if ! which zsh 1>/dev/null 2>&1; then
     
     if [ $flag_install_zsh = "y" ]; then
         # Enter the decision to determine whether to install zsh from sourcecode in command line 
-        read -p "Install zsh from sourcecode without sudo permission (y/n):" flag_way_install_zsh_without_sudo 
+        read -p "Install zsh with sudo (y/n):" flag_way_install_zsh_with_sudo 
         
-        if [ $flag_way_install_zsh_without_sudo = "y" ]; then 
+        if [ $flag_way_install_zsh_with_sudo = "y" ]; then 
+            # Install zsh by sudo permission 
+            sudo apt update && 
+            sudo apt install zsh-y && 
+            
+            # Set zsh as the default shell
+            chsh -s $(which zsh)           
+        else
             # Install zsh from sourcecode without sudo permission. If the source code cannt be downloaded, we can copy them from a computer to the target one. 
             if [ ! -e ~/download/zsh*.tar.gz ]; then
                 wget https://sourceforge.net/projects/zsh/files/latest/download -O ~/download/zsh.tar.gz
@@ -41,15 +48,10 @@ if ! which zsh 1>/dev/null 2>&1; then
             make install
             cd ..
             # Some configrations need to be written in the file ~/.bash_profile and ~/.bashrc
-        else
-            # Install zsh by sudo permission 
-            sudo apt update && 
-            sudo apt install zsh-y && 
-            
-            # Set zsh as the default shell
-            chsh -s $(which zsh) 
         fi
         echo zsh is installed successuflly now!
+    else
+        echo zsh installation is skipped!
     fi
 else
     echo -e "\033[31m zsh have been installed before! \033[0m"
@@ -66,17 +68,19 @@ if [ ! -d ~/.oh-my-zsh ]; then
     read -p "Install oh my zsh? (y/n):" flag_install_oh_my_zsh 
 
     if [ $flag_install_oh_my_zsh = "y" ]; then
-        read -p "Install on my zsh from sourcecode without sudo permission (y/n):" flag_way_install_on_my_zsh_without_sudo
+        read -p "Install on my zsh with sudo (y/n):" flag_way_install_on_my_zsh_with_sudo
         
-        if [ $flag_way_install_on_my_zsh_without_sudo = "y" ]; then
-            # Install oh my zsh without sudo permission
-            git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-        else
+        if [ $flag_way_install_on_my_zsh_with_sudo = "y" ]; then
             # Install oh my zsh with sudo permission. If it cannot be downloaded, we can copy ~/.oh-my-zsh in a computer to ~/ in the target computer.
             sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" 
+        else
+            # Install oh my zsh without sudo permission
+            git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
         fi
+        echo oh my zsh is installed successuflly now!
+    else
+        echo oh my zsh installation is skipped!
     fi
-    echo oh my zsh is installed successuflly now!  
 else
     echo oh my zsh has been installed before!
 fi
@@ -93,26 +97,31 @@ if [ $flag_install_plugins_of_oh_my_zsh = "y" ]; then
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
     git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting &&
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete 
+    echo Plugisns of oh my zsh are installed successuflly!
+else
+    echo Plugins of oh my zsh installation is skipped!
 fi
-echo Plugisns of oh my zsh are installed successuflly!
 
 
 #--------    Compelling environment  --------
 
 # Install autoconf
 if ! which autoconf 1>/dev/null 2>&1; then
-    echo autoconf is not installed
+    echo autoconf is not installed!
     
     read -p "Install autoconf (y/n):" flag_install_autoconf
+    
     if [ $flag_install_autoconf = "y" ]; then
-        read -p "Install autoconf from sourcecode without sudo permission (y/n):" flag_way_install_autoconf_without_sudo
+        read -p "Install autoconf with sudo (y/n):" flag_way_install_autoconf_with_sudo
         
-        if [ $flag_way_install_autoconf_without_sudo = "y"]; then
-            echo dd
-        else 
+        if [ $flag_way_install_autoconf_with_sudo = "y"]; then
             sudo apt install autoconf
+        else
+            echo dd
         fi
         echo autoconf is installed now!
+    else
+        echo autoconf installation is skipped!
     fi
 else
     echo autoconf has been installed before!
@@ -123,15 +132,18 @@ if ! which automake 1>/dev/null 2>&1; then
     echo automake is not installed
     
     read -p "Install automake (y/n):" flag_install_automake
+    
     if [ $flag_install_automake = "y" ]; then
-        read -p "Install automake from sourcecode without sudo permission (y/n):" flag_way_install_automake_without_sudo
+        read -p "Install automake with sudo (y/n):" flag_way_install_automake_with_sudo
         
-        if [ $flag_way_install_automake_without_sudo = "y"]; then
-            echo dd
-        else 
+        if [ $flag_way_install_automake_with_sudo = "y"]; then
             sudo apt install automake
+        else
+            echo dd
         fi
         echo automake is installed now!
+    else
+        echo automake installation is skipped!
     fi
 else
     echo automake has been installed before!
@@ -142,15 +154,18 @@ if ! which pkg-config 1>/dev/null 2>&1; then
     echo pkg-config is not installed
     
     read -p "Install pkg-config (y/n):" flag_install_pkg_config
+    
     if [ $flag_install_pkg_config = "y" ]; then
-        read -p "Install pkg-config from sourcecode without sudo permission (y/n):" flag_way_install_pkg_config_without_sudo
+        read -p "Install pkg-config with sudo (y/n):" flag_way_install_pkg_config_with_sudo
         
-        if [ $flag_way_install_pkg_config_without_sudo = "y"]; then
-            echo dd
-        else 
+        if [ $flag_way_install_pkg_config_with_sudo = "y"]; then
             sudo apt install pkg-config 
+        else 
+            echo dd
         fi
         echo pkg-config is installed now!
+    else
+        echo pkg-config installation is skipped!
     fi
 else
     echo pkg-config has been installed before!
@@ -161,15 +176,18 @@ if [ ! whereis pkg-config 1>/dev/null 2>&1 ]; then
     echo libtool is not installed
     
     read -p "Install libtool (y/n):" flag_install_libtool
+    
     if [ $flag_install_libtool = "y" ]; then
-        read -p "Install libtool from sourcecode without sudo permission (y/n):" flag_way_install_libtool_without_sudo
+        read -p "Install libtool with sudo (y/n):" flag_way_install_libtool_with_sudo
         
-        if [ $flag_way_install_libtool_without_sudo = "y"]; then
-            echo dd
+        if [ $flag_way_install_libtool_with_sudo = "y"]; then
+            sudo apt install libtool
         else 
-            sudo apt install libtool 
+            echo dd 
         fi
         echo libtool is installed now!
+    else
+        echo libtool installation is skipped!
     fi
 else
     echo libtool has been installed before!
@@ -187,9 +205,11 @@ if ! which ctags 1>/dev/null 2>&1; then
     
     if [ $flag_install_universal_ctags = "y" ]; then
         # Enter the decision to determine whether to install universal ctags from sourcecode in command line 
-        read -p "Install ctags from sourcecode without sudo permission (y/n):" flag_way_install_universal_ctags_without_sudo 
+        read -p "Install ctags with sudo (y/n):" flag_way_install_universal_ctags_with_sudo 
         
-        if [ $flag_way_install_universal_ctags_without_sudo = "y" ]; then
+        if [ $flag_way_install_universal_ctags_with_sudo = "y" ]; then
+            sudo apt install universal-ctags
+        else
             cd ~/download &&
            
             if [ ! -e ./ctags ]; then
@@ -201,9 +221,9 @@ if ! which ctags 1>/dev/null 2>&1; then
             ./configure --prefix=$HOME/opt/ctags && # set the installation directory, defaults to /usr/local
             make &&
             make install 
-        else
-            sudo apt install universal-ctags
         fi
+    else
+        echo universal ctags installation is skipped!
     fi
     echo universal ctags is installed successuflly now!
 else
@@ -215,15 +235,17 @@ fi
 
 # Install the vim plugins manager called vim-plug
 if [ ! -e ~/.vim/autoload/plug.vim ]; then
-    echo "\033[31m The vim plugins manager called vim-plug is not installed! \033[0m"
+    echo "\033[31m Vim plugin manager called vim-plug is not installed! \033[0m"
     
-    read -p "Install vim-plug? (y/n):" flag_install_vim_plug
+    read -p "Install vim plugin manager called vim-plug? (y/n):" flag_install_vim_plug
 
     if [ $flag_install_vim_plug = "y" ]; then
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    else
+        echo Vim plugin manager called vim-plug installation is skipped!
     fi
 else
-    echo "\033[31m The vim plugins manager vim-plug has been installed before! \033[0m"
+    echo "\033[31m Vim plugins manager called vim-plug has been installed before! \033[0m"
 fi
 
 
