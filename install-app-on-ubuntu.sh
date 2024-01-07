@@ -193,8 +193,8 @@ fi
 
 
 #--------    Environment or software that some plugins of vim require   --------
-# The link on installing universal ctags from sourcecode is https://github.com/universal-ctags/ctags
 
+# The link on installing universal ctags from sourcecode is https://github.com/universal-ctags/ctags
 if ! which ctags 1>/dev/null 2>&1; then
     echo universal ctags is not installed!
     
@@ -226,6 +226,47 @@ if ! which ctags 1>/dev/null 2>&1; then
     echo universal ctags is installed successuflly now!
 else
     echo universal ctags has been installed before!
+fi
+
+# Install and update node.js, install nodejs package manager, the links are https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04, https://linuxgenie.net/how-can-i-update-my-nodejs-to-the-latest-version-on-ubuntu/
+if ! which nodejs 1>/dev/null 2>&1; then
+    echo nodejs is not installed!
+    
+    # Install universal ctags which tagbar requires 
+    read -p "Install nodejs (y/n):" flag_install_nodejs
+    
+    if [ $flag_install_nodejs = "y" ]; then
+        # Enter the decision to determine whether to install it from sourcecode in command line 
+        read -p "Install ctags with sudo (y/n):" flag_way_install_nodejs_with_sudo 
+        
+        if [ $flag_way_install_nodejs_with_sudo = "y" ]; then
+            # Install nodejs 
+            sudo apt install nodejs &&
+
+            # Install nodejs manager npm 
+            sudo apt install npm &&
+
+            # Update nodejs
+            sudo npm cache clean -f &&
+            sudo npm install -g n &&
+            sudo n stable 
+        else
+            cd ~/opt
+            nodev=$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\-linux-x64.tar\.gz</a>.*|\1|p') &&
+            curl "https://nodejs.org/dist/${nodev}/node-${nodev}-linux-x64.tar.xz" > "node-${nodev}-linux-x64.tar.gz" &&
+
+            if [ !-d ./node ]; then
+                mkdir node
+            fi
+
+            tar -xf node-${nodev}-linux-x64.tar.gz -C ./node --strip-components 1
+        fi
+    else
+        echo nodejs installation is skipped!
+    fi
+    echo nodejs is installed successuflly now!
+else
+    echo nodejs has been installed before!
 fi
 
 
