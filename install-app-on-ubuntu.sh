@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 if [ ! -d ~/download ]; then
     mkdir ~/download
 fi
@@ -8,11 +9,23 @@ if [ ! -d ~/opt ]; then
     mkdir ~/opt
 fi
 
+
+#--------    Update the list of software packages, and install their updates available   --------
+
+read -p "Update the list of software, and install their updates available with sudo? (y/n):" flag_update_software_with_sudo
+if [ $flag_update_software_with_sudo = "y"]; then
+    sudo apt update &&
+    sudo apt upgrade
+else
+    echo Software update is skipped! 
+fi
+
+
 #--------    zsh    --------
 # The reference link: https://phoenixnap.com/kb/install-zsh-ubuntu, https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
 
 if ! which zsh 1>/dev/null 2>&1; then
-    echo "\033[31m zsh is not installed! \033[0m"
+    echo -e "\033[31m zsh is not installed! \033[0m"
 
     # Enter the decision to determine whether to install zsh in command line 
     read -p "Install zsh? (y/n):" flag_install_zsh 
