@@ -235,7 +235,7 @@ fi
 
 # Install the vim plugins manager called vim-plug
 if [ ! -e ~/.vim/autoload/plug.vim ]; then
-    echo "\033[31m Vim plugin manager called vim-plug is not installed! \033[0m"
+    echo -e "\033[31m Vim plugin manager called vim-plug is not installed! \033[0m"
     
     read -p "Install vim plugin manager called vim-plug? (y/n):" flag_install_vim_plug
 
@@ -245,7 +245,7 @@ if [ ! -e ~/.vim/autoload/plug.vim ]; then
         echo Vim plugin manager called vim-plug installation is skipped!
     fi
 else
-    echo "\033[31m Vim plugins manager called vim-plug has been installed before! \033[0m"
+    echo -e "\033[31m Vim plugins manager called vim-plug has been installed before! \033[0m"
 fi
 
 
