@@ -10,12 +10,13 @@ if [ ! -d ~/opt ]; then
 fi
 
 
-#--------    Update the list of software packages, and install their updates available   --------
+#--------    Update software   --------
 
-read -p "Update the list of software, and install their updates available with sudo? (y/n):" flag_update_software_with_sudo
+read -p "Update software with sudo? (y/n):" flag_update_software_with_sudo
 if [ $flag_update_software_with_sudo = "y"]; then
     sudo apt update &&
     sudo apt upgrade
+    echo -e "\033[31m Update software successuflly! \033[0m"
 else
     echo Software update is skipped! 
 fi
