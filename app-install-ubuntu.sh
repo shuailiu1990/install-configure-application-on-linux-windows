@@ -30,9 +30,7 @@ if ! which zsh 1>/dev/null 2>&1; then
             chsh -s $(which zsh)           
         else
             # Install zsh from sourcecode without sudo permission. If the source code cannt be downloaded, we can copy them from a computer to the target one. 
-            if [ ! -e ~/download/zsh*.tar.gz ]; then
-                wget https://sourceforge.net/projects/zsh/files/latest/download -O ~/download/zsh.tar.gz
-            fi &&
+            wget https://sourceforge.net/projects/zsh/files/latest/download -O ~/download/zsh.tar.gz &&
             
             cd ~/download &&
             
