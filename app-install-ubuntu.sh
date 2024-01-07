@@ -211,7 +211,7 @@ else
 fi
 
 
-#--------    Plugin of vim    --------
+#--------    Vim plugins manager called vim-plug    --------
 
 # Install the vim plugins manager called vim-plug
 if [ ! -e ~/.vim/autoload/plug.vim ]; then
@@ -223,5 +223,9 @@ if [ ! -e ~/.vim/autoload/plug.vim ]; then
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     fi
 else
-    echo "\033[31m The vim plugins manager vim-plug has been installed before! \033[0m" 
+    echo "\033[31m The vim plugins manager vim-plug has been installed before! \033[0m"
 fi
+
+
+#--------    Plugins of Vim     --------
+
