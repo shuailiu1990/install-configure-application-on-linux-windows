@@ -114,11 +114,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=~/.local/bin:$PATH
 
-[ -f ~/profile.d/anaconda3.sh ] && source ~/profile.d/anaconda3.sh
-[ -f ~/profile.d/proxy-clash-wsl2.sh ] && source ~/profile.d/proxy-clash-wsl2.sh
-[ -f ~/profile.d/node.sh ] && source ~/profile.d/node.sh
-
-alias python=$HOME/opt/anaconda3/bin/python3.11
-alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook
-
-
+# The commands as below are added by myself
+[ -e ~/profile.d/anaconda.sh ] && source ~/profile.d/anaconda.sh
+[ -e ~/profile.d/proxy-clash-wsl2.sh ] && source ~/profile.d/proxy-clash-wsl2.sh
+[ -e ~/profile.d/node.sh ] && source ~/profile.d/node.sh
+[ -e $HOME/opt/anaconda3/bin/python3.11] && [alias python=$HOME/opt/anaconda3/bin/python3.11]
+[ -e $HOME/opt/anaconda3/bin/jupyter-notebook ] && [alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook]
