@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -9,7 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="eastwood"
+ZSH_THEME="powerlevel10k/powerlevel10k"  #"eastwood"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -112,11 +119,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+
 export PATH=~/.local/bin:$PATH
 
-# The commands as below are added by myself
-[ -e ~/profile.d/anaconda.sh ] && source ~/profile.d/anaconda.sh
-[ -e ~/profile.d/proxy-clash-wsl2.sh ] && source ~/profile.d/proxy-clash-wsl2.sh
-[ -e ~/profile.d/node.sh ] && source ~/profile.d/node.sh
-[ -e $HOME/opt/anaconda3/bin/python3.11] && [alias python=$HOME/opt/anaconda3/bin/python3.11]
-[ -e $HOME/opt/anaconda3/bin/jupyter-notebook ] && [alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook]
+source ~/profile.d/anaconda3.sh
+#source ~/profile.d/proxy-clash-wsl2.sh
+
+alias python=$HOME/opt/anaconda3/bin/python3.11
+alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook
+alias nvim=$HOME/opt/nvim/bin/nvim
+#source ~/.profile
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
