@@ -125,10 +125,20 @@ if [ $flag_install_plugins_of_oh_my_zsh = "y" ]; then
 		git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting &&
 		git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting &&
 		git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
-	echo Plugisns of oh my zsh are installed successuflly!
+	echo Plugins of oh my zsh are installed successfully!
 else
 	echo Plugins of oh my zsh installation is skipped!
 fi
+
+#--------    The theme of oh my zsh: Powerlevel10k     --------
+read -p "Install Powerlevel10k? (y/n):" flag_install_powerlevel10k
+
+if [ flag_install_powerlevel10k = "y" ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    echo Powerlevel10k is installed successfully!
+else
+    echo Powerlevel10k installation is skipped!
+
 
 #--------    Compelling environment  --------
 
