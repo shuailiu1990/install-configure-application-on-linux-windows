@@ -12,6 +12,7 @@
   - [Install WSL2 and Linux on it](#install-wsl2-and-Linux-on-it)
   - [Configuration of WSL2](#configuration-of-wsl2)
   - [Uninstall WSL2 and Linux on it](#uninstall-wsl2-and-linux-on-it)
+  - [Install Nerd Font](#install-nerd-font)
 - [Application Manual](#application-manual)
   - [Git](#git)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
@@ -94,6 +95,12 @@ The Linux distribution is represented by **xxx**
 4. Delete all the files on Linux, the files are on
    ```
    C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
+   ```
+#### Install Nerd Font
+1. Download Nerd Font from **Download Zip** of **Code** on https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
+2. Open PowerShell
+3. ```
+   ./install.ps1
    ```
 ### Application Manual
 #### Git
