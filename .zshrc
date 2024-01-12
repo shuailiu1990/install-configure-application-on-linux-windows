@@ -123,13 +123,12 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=~/.local/bin:$PATH
 
-source ~/profile.d/anaconda3.sh
-#source ~/profile.d/proxy-clash-wsl2.sh
+[[ -e ~/profile.d/anaconda.sh ]] && source ~/profile.d/anaconda.sh
+#[[ -e ~/profile.d/proxy-clash-wsl2.sh ]] && source ~/profile.d/proxy-clash-wsl2.sh
 
-alias python=$HOME/opt/anaconda3/bin/python3.11
-alias jupyter-notebook=$HOME/opt/anaconda3/bin/jupyter-notebook
-alias nvim=$HOME/opt/nvim/bin/nvim
-#source ~/.profile
+[[ -e $HOME/opt/anaconda/bin/python3.11 ]] &&  alias python=$HOME/opt/anaconda/bin/python3.11
+[[ -e $HOME/opt/anaconda/bin/jupyter-notebook ]] && alias jupyter-notebook=$HOME/opt/anaconda/bin/jupyter-notebook
+[[ -e $HOME/opt/nvim/bin/nvim ]] && alias nvim=$HOME/opt/nvim/bin/nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
