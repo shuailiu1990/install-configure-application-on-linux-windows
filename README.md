@@ -13,7 +13,7 @@
   - [Configuration of PowerShell](#configuration-of-powershell)
   - [Install WSL2 and Linux on it](#install-wsl2-and-Linux-on-it)
   - [Configuration of WSL2](#configuration-of-wsl2)
-  - [Uninstall WSL2 and Linux on it](#uninstall-wsl2-and-linux-on-it)
+  - [Uninstall WSL2 on WSL2](#uninstall-linux-on-wsl2)
   - [Install Nerd Font](#install-nerd-font)
 - [Application Manual](#application-manual)
   - [Git](#git)
