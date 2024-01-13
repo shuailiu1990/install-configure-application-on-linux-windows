@@ -6,6 +6,7 @@
   - [Backup of configuration file](#backup-of-configuration-file)
     - [Configuration of shell](#configuration-of-shell)
     - [VIM](#vim)
+    - [TMUX](#tmux)
     - [Path of application](#path-of-application)
 - [Windows](#windows)
   - [Configuration of Windows terminal](#configuration-of-Windows-terminal)
