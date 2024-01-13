@@ -22,12 +22,12 @@ fi
 #--------    Neovim   --------
 read -p "Install Neovim? (y/n):" flag_install_neovim
 if [ $flag_install_neovim = "y"]; then
-	cd ~/opt &&
+	cd ~/download &&
 		wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz &&
-		if [ !-d ./nvim ]; then
-			mkdir nvim
+		if [ !-d ~/opt/nvim ]; then
+			mkdir ~/opt/nvim
 		fi &&
-		tar -xf nvim-linux64.tar.gz -C ./nvim --strip-components 1
+		tar -xf nvim-linux64.tar.gz -C ~/opt/nvim --strip-components 1
 	echo -e "\033[31m Install Neovim successuflly! \033[0m"
 else
 	echo Neovim installation is skipped!
