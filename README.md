@@ -9,6 +9,7 @@
     - [Path of application](#path-of-application)
 - [Windows](#windows)
   - [Configuration of Windows terminal](#configuration-of-Windows-terminal)
+  - [Configuration of PowerShell](#configuration-of-powershell)
   - [Install WSL2 and Linux on it](#install-wsl2-and-Linux-on-it)
   - [Configuration of WSL2](#configuration-of-wsl2)
   - [Uninstall WSL2 and Linux on it](#uninstall-wsl2-and-linux-on-it)
@@ -40,6 +41,10 @@ where xxx is the name of application.
 settings.json is the configuration file of Windows terminal on  
 ```
 C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+```
+#### Configuration of PowerShell
+```
+C:\User\UserName\.ssh\config
 ```
 #### Install WSL2 and Linux on it
 1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
