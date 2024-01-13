@@ -5,8 +5,8 @@
     - [Install application in Ubuntu](#install-application-in-Ubuntu)
   - [Backup of configuration file](#backup-of-configuration-file)
     - [Configuration of shell](#configuration-of-shell)
-    - [VIM](#vim)
-    - [TMUX](#tmux)
+    - [Configuration of vim](#configuration-of-vim)
+    - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
 - [Windows](#windows)
   - [Configuration of Windows terminal](#configuration-of-Windows-terminal)
@@ -28,8 +28,13 @@ The script app-install-ubuntu.sh can be used to install applications and their p
 #### Backup of configuration file
 ##### Configuration of shell
 .bashrc and .bashrc_profile are the configuration files of bash on $HOME, and .zshrc are the configuration file of zsh on $HOME.
-##### VIM
+##### Configuration of vim
 .vimrc is the configuration file of vim on $HOME.
+#### Configuration of tmux
+.tmux.conf is the configuration file of tmux on $HOME. You can make .tmux.conf work by 
+```
+tmux source-file ~/.tmux.conf
+```
 ##### Path of application
 profile.d is a directory including the paths of applications on $HOME. The paths of applications are in the bash files. When you want to add the paths of applications into .bashrc or .zshrc, you can add the following command in to .bashrc or .zshrc
 ```
