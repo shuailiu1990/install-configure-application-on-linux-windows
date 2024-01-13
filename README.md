@@ -30,7 +30,7 @@ The script app-install-ubuntu.sh can be used to install applications and their p
 .bashrc and .bashrc_profile are the configuration files of bash on $HOME, and .zshrc are the configuration file of zsh on $HOME.
 ##### Configuration of vim
 .vimrc is the configuration file of vim on $HOME.
-#### Configuration of tmux
+##### Configuration of tmux
 .tmux.conf is the configuration file of tmux on $HOME. You can make .tmux.conf work by 
 ```
 tmux source-file ~/.tmux.conf
