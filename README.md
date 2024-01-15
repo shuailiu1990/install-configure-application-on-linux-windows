@@ -117,6 +117,7 @@ The Linux distribution is represented by **xxx**
 #### Install StarShip
 https://www.jianshu.com/p/1b547035f839
 https://juejin.cn/post/7122814751603687438
+https://starship.rs/config/#prompt
 
 ### Application Manual
 #### Git
