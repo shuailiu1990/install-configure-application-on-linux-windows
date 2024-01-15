@@ -115,6 +115,7 @@ The Linux distribution is represented by **xxx**
    ./install.ps1
    ```
 #### Install StarShip
+https://www.jianshu.com/p/1b547035f839
 https://juejin.cn/post/7122814751603687438
 
 ### Application Manual
