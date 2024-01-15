@@ -15,6 +15,7 @@
   - [Configuration of WSL2](#configuration-of-wsl2)
   - [Uninstall linux on WSL2](#uninstall-linux-on-wsl2)
   - [Install Nerd Font](#install-nerd-font)
+  - [Install StarShip](#install-starship)
 - [Application Manual](#application-manual)
   - [Git](#git)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
@@ -113,6 +114,9 @@ The Linux distribution is represented by **xxx**
 3. ```
    ./install.ps1
    ```
+#### Install StarShip
+https://juejin.cn/post/7122814751603687438
+
 ### Application Manual
 #### Git
 ##### Add public key on Linux into GitHub
