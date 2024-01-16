@@ -24,7 +24,7 @@
 ### Linux
 #### Script to install application
 ##### Install application in Ubuntu
-The script app-install-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Ubuntu, e.g., zsh, oh my zsh, vim-plug.  
+The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically in Ubuntu/Ubuntu, e.g., zsh, oh my zsh, vim-plug.  
 
 #### Backup of configuration file
 ##### Configuration of shell
