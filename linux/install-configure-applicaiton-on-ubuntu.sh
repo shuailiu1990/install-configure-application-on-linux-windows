@@ -13,7 +13,7 @@ fi
 read -p "Update software with sudo? (y/n):" flag_update_software_with_sudo
 if [ $flag_update_software_with_sudo = "y"]; then
 	sudo apt update &&
-		sudo apt upgrade &&
+	    sudo apt upgrade &&
 		echo -e "\033[31m Update software successuflly! \033[0m"
 else
 	echo Software update is skipped!
@@ -139,6 +139,17 @@ if [ flag_install_powerlevel10k = "y" ]; then
 else
     echo Powerlevel10k installation is skipped!
 
+#--------    The fuck     --------
+read -p "Install the fuck? (y/n):" flag_install_thefuck
+
+if [ flag_install_thefuck = "y" ]; then
+    sudo apt update &&
+        sudo apt install python3-dev python3-pip python3-setuptools &&
+        pip3 install thefuck --user &&
+    echo Thefuck is installed successfully!
+else
+    echo Thefuck installation is skipped!
+fi
 
 #--------    Compelling environment  --------
 
