@@ -37,7 +37,7 @@ fi
 read -p "Install Lazyvim? (y/n):" flag_install_lazyvim
 if [ $flag_install_lazyvim = "y"]; then
 	cd ~ &&
-		git clone https://github.com/LazyVim/starter ~/.config/nvim &&
+	    git clone https://github.com/LazyVim/starter ~/.config/nvim &&
 		echo -e "\033[31m Install Lazyvim successuflly! \033[0m"
 else
 	echo Lazyvim installation is skipped!
