@@ -126,9 +126,12 @@ export PATH=~/.local/bin:$PATH
 [[ -e ~/profile.d/anaconda.sh ]] && source ~/profile.d/anaconda.sh
 #[[ -e ~/profile.d/proxy-clash-wsl2.sh ]] && source ~/profile.d/proxy-clash-wsl2.sh
 
-[[ -e $HOME/opt/anaconda/bin/python3.11 ]] &&  alias python=$HOME/opt/anaconda/bin/python3.11
+[[ -e $HOME/opt/anaconda/bin/python3 ]] &&  alias python=$HOME/opt/anaconda/bin/python3
 [[ -e $HOME/opt/anaconda/bin/jupyter-notebook ]] && alias jupyter-notebook=$HOME/opt/anaconda/bin/jupyter-notebook
 [[ -e $HOME/opt/nvim/bin/nvim ]] && alias nvim=$HOME/opt/nvim/bin/nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ which thefuck 1>/dev/null 2>&1 ] && eval $(thefuck --alias fuck)
+
