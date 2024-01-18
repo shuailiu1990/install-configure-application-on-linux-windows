@@ -53,6 +53,9 @@ C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe
 ```
 C:\User\UserName\.ssh\config
 ```
+```
+C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
 #### Install WSL2 and Linux on it
 1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
 
