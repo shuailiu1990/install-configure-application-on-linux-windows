@@ -13,7 +13,7 @@ fi
 read -p "Update software with sudo? (y/n):" flag_update_software_with_sudo
 if [ $flag_update_software_with_sudo = "y"]; then
 	sudo apt update &&
-	    sudo apt upgrade &&
+		sudo apt upgrade &&
 		echo -e "\033[31m Update software successuflly! \033[0m"
 else
 	echo Software update is skipped!
@@ -37,7 +37,7 @@ fi
 read -p "Install Lazyvim? (y/n):" flag_install_lazyvim
 if [ $flag_install_lazyvim = "y"]; then
 	cd ~ &&
-	    git clone https://github.com/LazyVim/starter ~/.config/nvim &&
+		git clone https://github.com/LazyVim/starter ~/.config/nvim &&
 		echo -e "\033[31m Install Lazyvim successuflly! \033[0m"
 else
 	echo Lazyvim installation is skipped!
@@ -134,21 +134,23 @@ fi
 read -p "Install Powerlevel10k? (y/n):" flag_install_powerlevel10k
 
 if [ flag_install_powerlevel10k = "y" ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    echo Powerlevel10k is installed successfully!
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	echo Powerlevel10k is installed successfully!
 else
-    echo Powerlevel10k installation is skipped!
+	echo Powerlevel10k installation is skipped!
+fi
 
 #--------    The fuck     --------
 read -p "Install the fuck? (y/n):" flag_install_thefuck
 
 if [ flag_install_thefuck = "y" ]; then
-    sudo apt update &&
-        sudo apt install python3-dev python3-pip python3-setuptools &&
-        pip3 install thefuck --user &&
-    echo Thefuck is installed successfully!
+	sudo apt update &&
+		sudo apt install python3-dev python3-pip python3-setuptools &&
+		pip3 install thefuck --user &&
+		pip3 install thefuck --upgrade &&
+		echo Thefuck is installed successfully!
 else
-    echo Thefuck installation is skipped!
+	echo Thefuck installation is skipped!
 fi
 
 #--------    Compelling environment  --------
