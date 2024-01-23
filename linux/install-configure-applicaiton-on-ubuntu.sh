@@ -21,14 +21,14 @@ fi
 
 #--------    Neovim   --------
 read -p "Install Neovim? (y/n):" flag_install_neovim
-if [ $flag_install_neovim = "y"]; then
+if [ $flag_install_neovim = "y" ]; then
 	cd ~/download &&
 		wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz &&
-		if [ !-d ~/opt/nvim ]; then
+		if [ ! -d ~/opt/nvim ]; then
 			mkdir ~/opt/nvim
 		fi &&
-		tar -xf nvim-linux64.tar.gz -C ~/opt/nvim --strip-components 1
-	echo -e "\033[31m Install Neovim successuflly! \033[0m"
+		tar -xf nvim-linux64.tar.gz -C ~/opt/nvim --strip-components 1 &&
+		echo -e "\033[31m Install Neovim successuflly! \033[0m"
 else
 	echo Neovim installation is skipped!
 fi
@@ -303,7 +303,7 @@ if ! which nodejs 1>/dev/null 2>&1; then
 			cd ~/opt &&
 				nodev=$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\-linux-x64.tar\.gz</a>.*|\1|p') &&
 				curl "https://nodejs.org/dist/${nodev}/node-${nodev}-linux-x64.tar.xz" >"node-${nodev}-linux-x64.tar.gz" &&
-				if [ !-d ./node ]; then
+				if [ ! -d ./node ]; then
 					mkdir node
 				fi &&
 				tar -xf node-${nodev}-linux-x64.tar.gz -C ./node --strip-components 1
