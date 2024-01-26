@@ -116,3 +116,6 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=~/.local/bin:$PATH
+
+# The set for zsh installed by source without sudo right
+[ -e $HOME/opt/zsh/bin/zsh ] && exec $HOME/opt/zsh/bin/zsh -l
