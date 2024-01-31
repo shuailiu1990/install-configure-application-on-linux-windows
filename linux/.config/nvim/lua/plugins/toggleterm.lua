@@ -1,26 +1,35 @@
+-- https://github.com/dpetka2001/dotfiles/blob/main/dot_config/nvim/lua/plugins/toggleterm.lua
 local Util = require("lazyvim.util")
-
 return {
   {
     "akinsho/toggleterm.nvim",
-    -- lazy = true,
+    lazy = true,
     cmd = { "ToggleTerm" },
+    desc = "ToggleTerm",
     keys = {
       {
-        "<leader>tf",
+        "<leader>tH",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, Util.root.get(), "float")
+          require("toggleterm").toggle(count, 15, vim.loop.cwd(), "horizontal")
         end,
-        desc = "ToggleTerm (float root_dir)",
+        desc = "Horizontal Terminal (cwd)",
       },
       {
         "<leader>th",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 15, vim.loop.cwd(), "horizontal")
+          require("toggleterm").toggle(count, 15, Util.root.get(), "horizontal")
         end,
-        desc = "ToggleTerm (horizontal cwd_dir)",
+        desc = "Horizontal Terminal (root dir)",
+      },
+      {
+        "<leader>tV",
+        function()
+          local count = vim.v.count1
+          require("toggleterm").toggle(count, vim.o.columns * 0.4, vim.loop.cwd(), "vertical")
+        end,
+        desc = "Vertical Terminal (cwd)",
       },
       {
         "<leader>tv",
@@ -28,31 +37,7 @@ return {
           local count = vim.v.count1
           require("toggleterm").toggle(count, vim.o.columns * 0.4, Util.root.get(), "vertical")
         end,
-        desc = "ToggleTerm (vertical root_dir)",
-      },
-      {
-        "<leader>tn",
-        "<cmd>ToggleTermSetName<cr>",
-        desc = "Set term name",
-      },
-      {
-        "<leader>ts",
-        "<cmd>TermSelect<cr>",
-        desc = "Select term",
-      },
-      {
-        "<leader>tt",
-        function()
-          require("toggleterm").toggle(1, 100, Util.root.get(), "tab")
-        end,
-        desc = "ToggleTerm (tab root_dir)",
-      },
-      {
-        "<leader>tt",
-        function()
-          require("toggleterm").toggle(1, 100, vim.loop.cwd(), "tab")
-        end,
-        desc = "ToggleTerm (tab cwd_dir)",
+        desc = "Vertical Terminal (root dir)",
       },
     },
     opts = {
@@ -100,7 +85,3 @@ return {
     },
   },
 }
-
---return {
---  { "akinsho/toggleterm.nvim", version = "*", config = true },
---}
