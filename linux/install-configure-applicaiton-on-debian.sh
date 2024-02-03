@@ -153,6 +153,19 @@ else
 	echo Thefuck installation is skipped!
 fi
 
+#--------    oh my tmux     --------
+read -p "Install oh my tmux? (y/n):" flag_install_oh_my_tmux
+
+if [ flag_install_oh_my_tmux = "y" ]; then
+	cd ~ &&
+		git clone https://github.com/gpakosz/.tmux.git &&
+		ln -s -f .tmux/.tmux.conf &&
+		cp .tmux/.tmux.conf.local . &&
+		echo oh my tmux is installed successfully!
+else
+	echo oh my tmux installation is skipped!
+fi
+
 #--------    Compelling environment  --------
 
 # Install autoconf
