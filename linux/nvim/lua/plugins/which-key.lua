@@ -19,6 +19,9 @@ return {
         ["<leader>t"] = {
           name = "+terminal",
         },
+        ["<leader>r"] = {
+          name = "+wrap mode",
+        },
       })
     end,
   },
