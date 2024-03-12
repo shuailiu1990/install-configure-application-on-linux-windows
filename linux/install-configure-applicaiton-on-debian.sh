@@ -11,7 +11,7 @@ fi
 #--------    Update software   --------
 
 read -p "Update software with sudo? (y/n):" flag_update_software_with_sudo
-if [ $flag_update_software_with_sudo = "y"]; then
+if [ $flag_update_software_with_sudo = "y" ]; then
 	sudo apt update &&
 		sudo apt upgrade &&
 		echo -e "\033[31m Update software successuflly! \033[0m"
@@ -35,7 +35,7 @@ fi
 
 #--------    Lazyvim   --------
 read -p "Install Lazyvim? (y/n):" flag_install_lazyvim
-if [ $flag_install_lazyvim = "y"]; then
+if [ $flag_install_lazyvim = "y" ]; then
 	cd ~ &&
 		git clone https://github.com/LazyVim/starter ~/.config/nvim &&
 		echo -e "\033[31m Install Lazyvim successuflly! \033[0m"
@@ -177,7 +177,7 @@ if ! which autoconf 1>/dev/null 2>&1; then
 	if [ $flag_install_autoconf = "y" ]; then
 		read -p "Install autoconf with sudo (y/n):" flag_way_install_autoconf_with_sudo
 
-		if [ $flag_way_install_autoconf_with_sudo = "y"]; then
+		if [ $flag_way_install_autoconf_with_sudo = "y" ]; then
 			sudo apt install autoconf
 		else
 			echo dd
@@ -199,7 +199,7 @@ if ! which automake 1>/dev/null 2>&1; then
 	if [ $flag_install_automake = "y" ]; then
 		read -p "Install automake with sudo (y/n):" flag_way_install_automake_with_sudo
 
-		if [ $flag_way_install_automake_with_sudo = "y"]; then
+		if [ $flag_way_install_automake_with_sudo = "y" ]; then
 			sudo apt install automake
 		else
 			echo dd
@@ -221,7 +221,7 @@ if ! which pkg-config 1>/dev/null 2>&1; then
 	if [ $flag_install_pkg_config = "y" ]; then
 		read -p "Install pkg-config with sudo (y/n):" flag_way_install_pkg_config_with_sudo
 
-		if [ $flag_way_install_pkg_config_with_sudo = "y"]; then
+		if [ $flag_way_install_pkg_config_with_sudo = "y" ]; then
 			sudo apt install pkg-config
 		else
 			echo dd
@@ -235,7 +235,7 @@ else
 fi
 
 # Install libtool
-if [ ! whereis pkg-config ] 1>/dev/null 2>&1; then
+if ! whereis pkg-config 1>/dev/null 2>&1; then
 	echo libtool is not installed
 
 	read -p "Install libtool (y/n):" flag_install_libtool
@@ -243,7 +243,7 @@ if [ ! whereis pkg-config ] 1>/dev/null 2>&1; then
 	if [ $flag_install_libtool = "y" ]; then
 		read -p "Install libtool with sudo (y/n):" flag_way_install_libtool_with_sudo
 
-		if [ $flag_way_install_libtool_with_sudo = "y"]; then
+		if [ $flag_way_install_libtool_with_sudo = "y" ]; then
 			sudo apt install libtool
 		else
 			echo dd
