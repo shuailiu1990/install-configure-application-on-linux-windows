@@ -176,8 +176,17 @@ https://starship.rs/config/#prompt
 The Link: https://www.bilibili.com/video/BV1kr4y1k79h/
 
 1. Download Zotero and Zotero Connector
-   ![image do](https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png)
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png" width="210px">
+   
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png" width="500px">
+2. On the website of Nutstore, add Zotero on **Security** of **Settings**
+    
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-add-app-nutstore.png" width="1000px">
+3. Open Zotero, set up items on **同步** of **首选项** of **编辑**
+
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-zotero.png" width="500px">
+4. 同步**C:\Users\刘帅**中的**Zotero文件夹**
+
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-fold-zotero.jpg" width="500px">
 
 ### Application Manual
 
