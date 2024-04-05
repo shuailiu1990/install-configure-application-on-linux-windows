@@ -192,6 +192,8 @@ https://starship.rs/config/#prompt
    ```
    and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
 
+![alt text](https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/test.png)
+
 #### Vim-Plug
 
 We input the following commands in vim, and press Enter
