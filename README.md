@@ -18,6 +18,7 @@
   - [Uninstall linux on WSL2](#uninstall-linux-on-wsl2)
   - [Install Nerd Font](#install-nerd-font)
   - [Install StarShip](#install-starship)
+  - [Install Zotero](#install-zotero)
 - [Application Manual](#application-manual)
   - [Git](#git)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
@@ -170,6 +171,14 @@ https://www.jianshu.com/p/1b547035f839
 https://juejin.cn/post/7122814751603687438
 https://starship.rs/config/#prompt
 
+#### Install Zotero
+
+The Link: https://www.bilibili.com/video/BV1kr4y1k79h/
+
+1. Download Zotero and Zotero Connector
+   ![image do](https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png)
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png" width="210px">
+
 ### Application Manual
 
 #### Git
@@ -191,8 +200,6 @@ https://starship.rs/config/#prompt
    vim id_rsa.pub
    ```
    and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
-
-![alt text](https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/test.png)
 
 #### Vim-Plug
 
