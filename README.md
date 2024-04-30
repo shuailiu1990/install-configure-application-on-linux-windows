@@ -13,12 +13,12 @@
 - [Windows](#windows)
   - [Configuration of Windows terminal](#configuration-of-windows-terminal)
   - [Configuration of PowerShell](#configuration-of-powershell)
-  - [Install WSL2 and Linux on it](#install-wsl2-and-linux-on-it)
+  - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
   - [Configuration of WSL2](#configuration-of-wsl2)
-  - [Uninstall linux on WSL2](#uninstall-linux-on-wsl2)
+  - [Uninstall Linux distribution on WSL2](#uninstall-linux-distribution-on-wsl2)
   - [Install Nerd Font](#install-nerd-font)
   - [Install StarShip](#install-starship)
-  - [Install Zotero](#install-zotero)
+  - [Install and configure Zotero](#install-and-configure-zotero)
 - [Application Manual](#application-manual)
   - [Git](#git)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
@@ -80,7 +80,7 @@ C:\User\UserName\.ssh\config
 C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
-#### Install WSL2 and Linux on it
+#### Install WSL2 and Linux distribution on it
 
 1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
 
@@ -140,7 +140,7 @@ where xxx is a Linux distribution, e.g., Ubuntu-20.04
 C:\Users\UserName
 ```
 
-#### Uninstall Linux on WSL2
+#### Uninstall Linux distribution on WSL2
 
 The Linux distribution is represented by **xxx**
 
@@ -171,9 +171,9 @@ https://www.jianshu.com/p/1b547035f839
 https://juejin.cn/post/7122814751603687438
 https://starship.rs/config/#prompt
 
-#### Install Zotero
+#### Install and configure Zotero
 
-The Link: https://www.bilibili.com/video/BV1kr4y1k79h/
+The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 
 1. Download Zotero and Zotero Connector
    
@@ -184,9 +184,15 @@ The Link: https://www.bilibili.com/video/BV1kr4y1k79h/
 3. Open Zotero, set up items on **同步** of **首选项** of **编辑**
 
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-zotero.png" width="500px">
-4. 同步**C:\Users\刘帅**中的**Zotero文件夹**
+4. 将**C:\Users\刘帅**中的**Zotero文件夹**同步到Nutstore
 
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-fold-zotero.jpg" width="500px">
+5. Install the Zotero plugin called Zotfile
+   Search the plugin Zotfile on the website https://www.zotero.org/support/plugins, download and install it as below
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotefile-step-1.png" width="500px">
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotefile-step-2.png" width="500px">
+
+
 
 ### Application Manual
 
