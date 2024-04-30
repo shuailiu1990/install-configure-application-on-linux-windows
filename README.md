@@ -189,7 +189,8 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-fold-zotero.jpg" width="500px">
 5. Install the Zotero plugin called Zotfile
    Search the plugin Zotfile on the website https://www.zotero.org/support/plugins, download and install it as below
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-1.png" width="500px">
+   
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-1.png" width="300px">
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-2.png" width="500px">
 
 
