@@ -192,7 +192,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
    
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-1.png" width="400px">
    
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-2.png" width="300px">
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-2.png" width="500px">
 
 
 ### Application Manual
