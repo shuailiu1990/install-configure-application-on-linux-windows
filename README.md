@@ -7,6 +7,7 @@
     - [Install application on Ubuntu](#install-application-on-ubuntu)
   - [Backup of configuration file](#backup-of-configuration-file)
     - [Configuration of shell](#configuration-of-shell)
+    - [Configuration of Neovim](#configuration-of-neovim)
     - [Configuration of vim](#configuration-of-vim)
     - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
@@ -38,13 +39,17 @@ The script install-configure-application-on-ubuntu.sh can be used to install app
 
 .bashrc and .bashrc_profile are the configuration files of bash on $HOME, and .zshrc are the configuration file of zsh on $HOME.
 
+##### Configuration of Neovim
+
+nvim is the configuration file of Neovim in **.config** on $HOME.
+
 ##### Configuration of vim
 
 .vimrc is the configuration file of vim on $HOME.
 
 ##### Configuration of tmux
 
-.tmux.conf is the configuration file of tmux on $HOME. You can make .tmux.conf work by
+.tmux is the configuration file of tmux on $HOME.
 
 ```
 tmux source-file ~/.tmux.conf
