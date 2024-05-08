@@ -203,7 +203,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 ### Application Manual
 
 #### Git
-
+#### GitHub
 ##### Add public key on Linux into GitHub
 
 1. ```
