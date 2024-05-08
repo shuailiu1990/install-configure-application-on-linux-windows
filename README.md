@@ -5,7 +5,7 @@
 - [Linux](#linux)
   - [Script to install application](#script-to-install-application)
     - [Install application on Ubuntu](#install-application-on-ubuntu)
-  - [Backup of configuration file on Linux](#backup-of-configuration-file-linux)
+  - [Backup of configuration file on Linux](#backup-of-configuration-file-on-linux)
     - [Configuration of shell](#configuration-of-shell)
     - [Configuration of Neovim](#configuration-of-neovim)
     - [Configuration of vim](#configuration-of-vim)
