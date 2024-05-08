@@ -67,8 +67,8 @@ source ~/profile.d/xxx.sh
 where xxx is the name of application.
 
 ### Windows
-
-#### Configuration of Windows terminal
+#### Backup of configuration
+##### Configuration of Windows terminal
 
 settings.json is the configuration file of Windows terminal on
 
@@ -76,7 +76,7 @@ settings.json is the configuration file of Windows terminal on
 C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 ```
 
-#### Configuration of PowerShell
+##### Configuration of PowerShell
 
 ```
 C:\User\UserName\.ssh\config
@@ -84,6 +84,10 @@ C:\User\UserName\.ssh\config
 
 ```
 C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
+##### Configuration of Starship
+```
+C:\User\UserName\.config\starship.toml
 ```
 
 #### Install WSL2 and Linux distribution on it
