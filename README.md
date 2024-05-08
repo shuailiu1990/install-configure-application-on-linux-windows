@@ -5,14 +5,16 @@
 - [Linux](#linux)
   - [Script to install application](#script-to-install-application)
     - [Install application on Ubuntu](#install-application-on-ubuntu)
-  - [Backup of configuration file](#backup-of-configuration-file)
+  - [Backup of configuration file on Linux](#backup-of-configuration-file-on-linux)
     - [Configuration of shell](#configuration-of-shell)
+    - [Configuration of Neovim](#configuration-of-neovim)
     - [Configuration of vim](#configuration-of-vim)
     - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
 - [Windows](#windows)
-  - [Configuration of Windows terminal](#configuration-of-windows-terminal)
-  - [Configuration of PowerShell](#configuration-of-powershell)
+  - [Backup of configuration file on Windows](#backup-of-configuration-file-on-windows)
+    - [Configuration of Windows terminal](#configuration-of-windows-terminal)
+    - [Configuration of PowerShell](#configuration-of-powershell)
   - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
   - [Configuration of WSL2](#configuration-of-wsl2)
   - [Uninstall Linux distribution on WSL2](#uninstall-linux-distribution-on-wsl2)
@@ -21,6 +23,7 @@
   - [Install and configure Zotero](#install-and-configure-zotero)
 - [Application Manual](#application-manual)
   - [Git](#git)
+  - [GitHub](#github)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
   - [Vim-Plug](#vim-plug)
 
@@ -32,11 +35,15 @@
 
 The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.
 
-#### Backup of configuration file
+#### Backup of configuration file on Linux
 
 ##### Configuration of shell
 
 .bashrc and .bashrc_profile are the configuration files of bash on $HOME, and .zshrc are the configuration file of zsh on $HOME.
+
+##### Configuration of Neovim
+
+nvim is the configuration file of Neovim in **.config** on $HOME.
 
 ##### Configuration of vim
 
@@ -44,7 +51,7 @@ The script install-configure-application-on-ubuntu.sh can be used to install app
 
 ##### Configuration of tmux
 
-.tmux.conf is the configuration file of tmux on $HOME. You can make .tmux.conf work by
+.tmux is the configuration file of tmux on $HOME.
 
 ```
 tmux source-file ~/.tmux.conf
@@ -62,7 +69,9 @@ where xxx is the name of application.
 
 ### Windows
 
-#### Configuration of Windows terminal
+#### Backup of configuration file on Windows
+
+##### Configuration of Windows terminal
 
 settings.json is the configuration file of Windows terminal on
 
@@ -70,7 +79,7 @@ settings.json is the configuration file of Windows terminal on
 C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
 ```
 
-#### Configuration of PowerShell
+##### Configuration of PowerShell
 
 ```
 C:\User\UserName\.ssh\config
@@ -78,6 +87,10 @@ C:\User\UserName\.ssh\config
 
 ```
 C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
+##### Configuration of Starship
+```
+C:\User\UserName\.config\starship.toml
 ```
 
 #### Install WSL2 and Linux distribution on it
@@ -190,15 +203,14 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 5. Install the Zotero plugin called Zotfile
    Search the plugin Zotfile on the website https://www.zotero.org/support/plugins, download and install it as below
    
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-1.png" width="400px">
-   
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-2.png" width="500px" height="200px">
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-1.png" width="400px">  
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-step-2.png" width="550px" height="300px">
 
 
 ### Application Manual
 
 #### Git
-
+#### GitHub
 ##### Add public key on Linux into GitHub
 
 1. ```
