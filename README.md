@@ -12,8 +12,9 @@
     - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
 - [Windows](#windows)
-  - [Configuration of Windows terminal](#configuration-of-windows-terminal)
-  - [Configuration of PowerShell](#configuration-of-powershell)
+  - [Backup of configuration file](#backup-of-configuration-file)
+    - [Configuration of Windows terminal](#configuration-of-windows-terminal)
+    - [Configuration of PowerShell](#configuration-of-powershell)
   - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
   - [Configuration of WSL2](#configuration-of-wsl2)
   - [Uninstall Linux distribution on WSL2](#uninstall-linux-distribution-on-wsl2)
@@ -67,7 +68,9 @@ source ~/profile.d/xxx.sh
 where xxx is the name of application.
 
 ### Windows
-#### Backup of configuration
+
+#### Backup of configuration file
+
 ##### Configuration of Windows terminal
 
 settings.json is the configuration file of Windows terminal on
