@@ -22,6 +22,7 @@
   - [Install and configure Zotero](#install-and-configure-zotero)
 - [Application Manual](#application-manual)
   - [Git](#git)
+  - [GitHub](#github)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
   - [Vim-Plug](#vim-plug)
 
