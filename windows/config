@@ -1,0 +1,16 @@
+ServerAliveInterval 30
+
+Host server-lw
+  HostName 172.16.244.74
+  Port 22
+  User shuailiu
+  PreferredAuthentications publickey
+  IdentityFile C:\Users\刘帅\.ssh\id_rsa
+
+Host cluster-tq
+  HostName 172.16.209.214
+  Port 22
+  User shuailiu
+  PreferredAuthentications publickey
+  IdentityFile C:\Users\刘帅\.ssh\id_rsa
+
