@@ -22,6 +22,7 @@
   - [Install StarShip](#install-starship)
   - [Install and configure Zotero](#install-and-configure-zotero)
 - [Application Manual](#application-manual)
+  - [Jupyter notebook](#jupyter-notebook)
   - [Git](#git)
   - [GitHub](#github)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
@@ -208,6 +209,9 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 
 
 ### Application Manual
+
+#### Jupyter notebook
+2. Vist Jupyter notebook on remote server via local browser
 
 #### Git
 #### GitHub
