@@ -219,8 +219,12 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 
 #### Jupyter notebook
 ##### Vist Jupyter notebook on remote server via local browser
-1. The first method:
-(1). dd
+1. The first method: ssh远程使用Jupyter notebook
+
+(1). Login the remote server, and type the command as below in the command line
+```
+jupyter notebook --no-browser --port=8889
+```
 
 #### Git
 #### GitHub
