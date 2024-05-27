@@ -217,7 +217,8 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 ### Application Manual
 
 #### Jupyter notebook
-2. Vist Jupyter notebook on remote server via local browser
+##### Vist Jupyter notebook on remote server via local browser
+1. ddd
 
 #### Git
 #### GitHub
