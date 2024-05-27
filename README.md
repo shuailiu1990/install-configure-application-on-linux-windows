@@ -264,6 +264,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
     ssh -N -f -L localhost:8888:localhost:8889 username@remote-serverIP
     ```
     其中 -N 告诉SSH没有命令要被远程执行; -f 告诉SSH在后台执行; -L 是指定port forwarding的配置, 远端端口是8889 (server-lw的默认端口为8950，有时候会被占用，所以要根据提示来设置改端口), 本地的端口号的8888. username@remote-serverIP 用实际的远程帐户和远程地址替换
+   
     (6). Input the command in the browser on the local server
     ```
     localhost:8888
