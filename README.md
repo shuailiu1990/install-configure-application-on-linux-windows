@@ -219,13 +219,17 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 
 #### Jupyter notebook
 ##### Vist Jupyter notebook on remote server via local browser
-1. The first method: ssh远程使用Jupyter notebook
-
-  1.1 Login the remote server, and type the command as below in the command line
-```
-jupyter notebook --no-browser --port=8889
-```
-
+1. The first method: 通过SSH远程使用Jupyter notebook
+  
+    (1). Login the remote server, and type the command as below in the command line
+    ```
+    jupyter notebook --no-browser --port=8889
+    ```
+    (2). 在本地机器的terminal中启动SSH
+    ```
+    ssh -N -f -L localhost:8888:localhost:8889 username@serverIP
+    ```
+    其中 -N 告诉SSH没有命令要被远程执行； -f 告诉SSH在后台执行； -L 是指定port forwarding的配置，远端端口是8889，本地的端口号的8888；username@serverIP为远程服务器的账号与IP。
 #### Git
 #### GitHub
 ##### Add public key on Linux into GitHub
