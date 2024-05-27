@@ -243,7 +243,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
     c.NotebookApp.ip = '*'                                                                                                                                                
     c.NotebookApp.password = u'sha:ce...刚才复制的那个密文'
     c.NotebookApp.open_browser = False
-    c.NotebookApp.port =8888 #可自行指定一个端口, 访问时使用该端口
+    c.NotebookApp.port = 8888 #可自行指定一个端口, 访问时使用该端口
     ```
     (4). 在服务器上启动jupyter notebook
     ```
