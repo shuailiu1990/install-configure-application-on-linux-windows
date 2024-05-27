@@ -237,7 +237,14 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
     jupyter notebook --generate-config
     ```
     (2). Generate访问密码
-    Input **ipython** or **ipython2**, 设置为Jupyter访问密码, e.g., 235711131719, copy the output string **sha1:xxxxxxxxxxxxx**
+    Input **ipython** in the command line, 然后通过输入以下命令设置为Jupyter访问密码, e.g., 235711131719.
+    ```
+    from notebook.auth import passwd
+    ```
+    相关提示信息与输出信息如下图所示
+    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-generate-hash-value-jupyter-notebook.png" width="400px">
+   
+    注意此时要copy the output string **sha1:xxxxxxxxxxxxx**
     (3). 修改~/.jupyter/jupyter_notebook_config.py中对应行如下(此文件已有下面的语句, 只需要将前面的注释符号删掉即可)
     ```
     c.NotebookApp.ip = '*'                                                                                                                                                
