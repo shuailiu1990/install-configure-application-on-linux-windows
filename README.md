@@ -207,6 +207,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-1.png" width="400px">  
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-2.png" width="550px" height="300px">
    After the installation, we should check its settings as below
+   
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-1.png" width="400px">  
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-2.png" width="550px" height="300px">
 6. Install the Zotero Plugin PDF Translate as the procedures above.
