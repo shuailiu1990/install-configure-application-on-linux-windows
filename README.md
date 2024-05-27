@@ -242,6 +242,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
     from notebook.auth import passwd
     ```
     相关提示信息与输出信息如下图所示
+   
     <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-generate-hash-value-jupyter-notebook.png" width="400px">
    
     注意此时要copy the output string **sha1:xxxxxxxxxxxxx**
