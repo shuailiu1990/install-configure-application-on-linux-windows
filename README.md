@@ -237,6 +237,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
     jupyter notebook --generate-config
     ```
     (2). Generate访问密码
+   
     Input **ipython** in the command line, 然后通过输入以下命令设置为Jupyter访问密码, e.g., 235711131719.
     ```
     from notebook.auth import passwd
