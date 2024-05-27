@@ -23,6 +23,7 @@
   - [Install and configure Zotero](#install-and-configure-zotero)
 - [Application Manual](#application-manual)
   - [Jupyter notebook](#jupyter-notebook)
+    - [Vist Jupyter notebook on remote server via local browser](#vist-jupyter-notebook-on-remote-server-via-local-browser)
   - [Git](#git)
   - [GitHub](#github)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
