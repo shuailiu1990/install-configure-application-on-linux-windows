@@ -69,6 +69,26 @@ source ~/profile.d/xxx.sh
 
 where xxx is the name of application.
 
+#### Application Manual
+##### GitHub
+###### Add public key on Linux into GitHub
+
+1. ```
+   cd ~/.ssh
+   ```
+   if .ssh does not exist, then
+   ```
+   mkdir ~/.ssh
+   ```
+2. ```
+   ssh-keygen -t rsa -C "youremail@example.com"
+   ```
+   where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
+3. ```
+   vim id_rsa.pub
+   ```
+   and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
+
 ### Windows
 
 #### Configuration file on Windows
