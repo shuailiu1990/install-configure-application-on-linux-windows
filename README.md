@@ -5,14 +5,14 @@
 - [Linux](#linux)
   - [Script to install application](#script-to-install-application)
     - [Install application on Ubuntu](#install-application-on-ubuntu)
-  - [Backup of configuration file on Linux](#backup-of-configuration-file-on-linux)
+  - [Configuration file on Linux](#configuration-file-on-linux)
     - [Configuration of shell](#configuration-of-shell)
     - [Configuration of Neovim](#configuration-of-neovim)
     - [Configuration of vim](#configuration-of-vim)
     - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
 - [Windows](#windows)
-  - [Backup of configuration file on Windows](#backup-of-configuration-file-on-windows)
+  - [Configuration file on Windows](#configuration-file-on-windows)
     - [Configuration of Windows terminal](#configuration-of-windows-terminal)
     - [Configuration of PowerShell](#configuration-of-powershell)
   - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
@@ -37,7 +37,7 @@
 
 The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, Lazyvim.
 
-#### Backup of configuration file on Linux
+#### Configuration file on Linux
 
 ##### Configuration of shell
 
@@ -71,7 +71,7 @@ where xxx is the name of application.
 
 ### Windows
 
-#### Backup of configuration file on Windows
+#### Configuration file on Windows
 
 ##### Configuration of Windows terminal
 
