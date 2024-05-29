@@ -11,6 +11,12 @@
     - [Configuration of vim](#configuration-of-vim)
     - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
+  - [Jupyter notebook](#jupyter-notebook)
+    - [Vist Jupyter notebook on remote server via local browser](#vist-jupyter-notebook-on-remote-server-via-local-browser)
+  - [Git](#git)
+  - [GitHub](#github)
+    - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
+  - [Vim-Plug](#vim-plug)
 - [Windows](#windows)
   - [Configuration file on Windows](#configuration-file-on-windows)
     - [Configuration of Windows terminal](#configuration-of-windows-terminal)
@@ -21,15 +27,10 @@
   - [Install Nerd Font](#install-nerd-font)
   - [Install StarShip](#install-starship)
   - [Install and configure Zotero](#install-and-configure-zotero)
-- [Application Manual](#application-manual)
-  - [Jupyter notebook](#jupyter-notebook)
-    - [Vist Jupyter notebook on remote server via local browser](#vist-jupyter-notebook-on-remote-server-via-local-browser)
-  - [Git](#git)
-  - [GitHub](#github)
-    - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
-  - [Vim-Plug](#vim-plug)
 
 ### Linux
+
+This section contains the script to install applications, their configuration files, and the ways to set up them.
 
 #### Script to install application
 
@@ -69,6 +70,117 @@ source ~/profile.d/xxx.sh
 
 where xxx is the name of application.
 
+#### Jupyter notebook
+##### Vist Jupyter notebook on remote server via local browser
+1. The first method: 通过SSH远程使用Jupyter notebook
+  
+    (1). Login the remote server, and type the command as below in the command line
+    ```
+    jupyter notebook --no-browser --port=8889
+    ```
+    (2). 在本地机器的terminal中启动SSH
+    ```
+    ssh -N -f -L localhost:8888:localhost:8889 username@remote-serverIP
+    ```
+    其中 -N 告诉SSH没有命令要被远程执行; -f 告诉SSH在后台执行; -L 是指定port forwarding的配置, 远端端口是8889, 本地的端口号的8888; username@serverIP为远程服务器的账号与IP.
+2. The second method: 利用Jupyter notebook自带的远程访问功能
+
+    (1). Login the remote server, generate the default configure file of Jupyter notebook
+    ```
+    jupyter notebook --generate-config
+    ```
+    (2). Generate访问密码
+   
+    Input **ipython** in the command line, 然后通过输入以下命令设置为Jupyter访问密码, e.g., 235711131719.
+    ```
+    from notebook.auth import passwd
+    ```
+    相关提示信息与输出信息如下图所示
+   
+    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-generate-hash-value-jupyter-notebook.png" width="800px" height="150px">
+   
+    注意此时要copy the output string **sha1:xxxxxxxxxxxxx**
+   
+    (3). 修改~/.jupyter/jupyter_notebook_config.py中对应行如下(此文件已有下面的语句, 只需要将前面的注释符号删掉即可)
+    ```
+    c.NotebookApp.ip = '*'                                                                                                                                                
+    c.NotebookApp.password = u'sha:ce...刚才复制的那个密文'
+    c.NotebookApp.open_browser = False
+    c.NotebookApp.port = 8888 #可自行指定一个端口, 访问时使用该端口
+    ```
+    (4). 在服务器上启动jupyter notebook
+    ```
+    jupyter notebook --no-browser --ip=remote-serverIP
+    ```
+    (5). 在本地终端的浏览器的地址栏输入
+    ```
+    remote-serverIP:8888
+    ```
+
+    Note that if your local server 处于校园网外, i.e., 需要通过VPN访问学校内网, 则需要把以上(4)和(5)替换为以下步骤
+    (4). Input the command as below on the remote server
+    ```
+    jupyter notebook --no-browser --port=8889
+    ```
+    (5). Input the command as below on the local server
+    ```
+    ssh -N -f -L localhost:8888:localhost:8889 username@remote-serverIP
+    ```
+    其中 -N 告诉SSH没有命令要被远程执行; -f 告诉SSH在后台执行; -L 是指定port forwarding的配置, 远端端口是8889 (server-lw的默认端口为8950，有时候会被占用，所以要根据提示来设置改端口), 本地的端口号的8888. username@remote-serverIP 用实际的远程帐户和远程地址替换
+   
+    (6). Input the command in the browser on the local server
+    ```
+    localhost:8888
+    ```
+    
+
+#### Git
+#### GitHub
+##### Add public key on Linux into GitHub
+
+1. ```
+   cd ~/.ssh
+   ```
+   if .ssh does not exist, then
+   ```
+   mkdir ~/.ssh
+   ```
+2. ```
+   ssh-keygen -t rsa -C "youremail@example.com"
+   ```
+   where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
+3. ```
+   vim id_rsa.pub
+   ```
+   and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
+
+#### Vim-Plug
+
+We input the following commands in vim, and press Enter
+
+- Install plugins
+  ```
+  :PlugInstall
+  ```
+  All the plugins in .vimrc can be installed with the above command.
+- Clean plugins
+  Firstly, comment the plugin xxx in .vimrc, and then enter
+  ```
+  :PlugClean xxx
+  ```
+- Update plugin
+  ```
+  :PlugUpdate
+  ```
+- Check the changed state of plugin
+  ```
+  :PlugDiff
+  ```
+- Check the state of plugin
+  ```
+  :PlugStatus
+  ```
+  
 ### Windows
 
 #### Configuration file on Windows
@@ -215,115 +327,6 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
 6. Install the Zotero Plugin PDF Translate as the procedures above.
 
 
-### Application Manual
 
-#### Jupyter notebook
-##### Vist Jupyter notebook on remote server via local browser
-1. The first method: 通过SSH远程使用Jupyter notebook
-  
-    (1). Login the remote server, and type the command as below in the command line
-    ```
-    jupyter notebook --no-browser --port=8889
-    ```
-    (2). 在本地机器的terminal中启动SSH
-    ```
-    ssh -N -f -L localhost:8888:localhost:8889 username@remote-serverIP
-    ```
-    其中 -N 告诉SSH没有命令要被远程执行; -f 告诉SSH在后台执行; -L 是指定port forwarding的配置, 远端端口是8889, 本地的端口号的8888; username@serverIP为远程服务器的账号与IP.
-2. The second method: 利用Jupyter notebook自带的远程访问功能
 
-    (1). Login the remote server, generate the default configure file of Jupyter notebook
-    ```
-    jupyter notebook --generate-config
-    ```
-    (2). Generate访问密码
-   
-    Input **ipython** in the command line, 然后通过输入以下命令设置为Jupyter访问密码, e.g., 235711131719.
-    ```
-    from notebook.auth import passwd
-    ```
-    相关提示信息与输出信息如下图所示
-   
-    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-generate-hash-value-jupyter-notebook.png" width="800px" height="150px">
-   
-    注意此时要copy the output string **sha1:xxxxxxxxxxxxx**
-   
-    (3). 修改~/.jupyter/jupyter_notebook_config.py中对应行如下(此文件已有下面的语句, 只需要将前面的注释符号删掉即可)
-    ```
-    c.NotebookApp.ip = '*'                                                                                                                                                
-    c.NotebookApp.password = u'sha:ce...刚才复制的那个密文'
-    c.NotebookApp.open_browser = False
-    c.NotebookApp.port = 8888 #可自行指定一个端口, 访问时使用该端口
-    ```
-    (4). 在服务器上启动jupyter notebook
-    ```
-    jupyter notebook --no-browser --ip=remote-serverIP
-    ```
-    (5). 在本地终端的浏览器的地址栏输入
-    ```
-    remote-serverIP:8888
-    ```
 
-    Note that if your local server 处于校园网外, i.e., 需要通过VPN访问学校内网, 则需要把以上(4)和(5)替换为以下步骤
-    (4). Input the command as below on the remote server
-    ```
-    jupyter notebook --no-browser --port=8889
-    ```
-    (5). Input the command as below on the local server
-    ```
-    ssh -N -f -L localhost:8888:localhost:8889 username@remote-serverIP
-    ```
-    其中 -N 告诉SSH没有命令要被远程执行; -f 告诉SSH在后台执行; -L 是指定port forwarding的配置, 远端端口是8889 (server-lw的默认端口为8950，有时候会被占用，所以要根据提示来设置改端口), 本地的端口号的8888. username@remote-serverIP 用实际的远程帐户和远程地址替换
-   
-    (6). Input the command in the browser on the local server
-    ```
-    localhost:8888
-    ```
-    
-
-#### Git
-#### GitHub
-##### Add public key on Linux into GitHub
-
-1. ```
-   cd ~/.ssh
-   ```
-   if .ssh does not exist, then
-   ```
-   mkdir ~/.ssh
-   ```
-2. ```
-   ssh-keygen -t rsa -C "youremail@example.com"
-   ```
-   where youremail@example.com is your email on GitHub. When some prompt information，e.g., Enter file in which to save the key， Enter passphrase, etc., just press Enter.
-3. ```
-   vim id_rsa.pub
-   ```
-   and then copy the content beginning with **ssh-rsa** to **SSH and GPG Keys** of **Settings** of your account on GitHub.
-
-#### Vim-Plug
-
-We input the following commands in vim, and press Enter
-
-- Install plugins
-  ```
-  :PlugInstall
-  ```
-  All the plugins in .vimrc can be installed with the above command.
-- Clean plugins
-  Firstly, comment the plugin xxx in .vimrc, and then enter
-  ```
-  :PlugClean xxx
-  ```
-- Update plugin
-  ```
-  :PlugUpdate
-  ```
-- Check the changed state of plugin
-  ```
-  :PlugDiff
-  ```
-- Check the state of plugin
-  ```
-  :PlugStatus
-  ```
