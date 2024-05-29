@@ -5,7 +5,7 @@
 - [Linux](#linux)
   - [Script to install application](#script-to-install-application)
     - [Install application on Ubuntu](#install-application-on-ubuntu)
-  - [Configuration file on Linux](#configuration-file-on-linux)
+  - [Configuration file of application on Linux](#configuration-file-of-application-on-linux)
     - [Configuration of shell](#configuration-of-shell)
     - [Configuration of Neovim](#configuration-of-neovim)
     - [Configuration of vim](#configuration-of-vim)
@@ -18,7 +18,7 @@
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
   - [Vim-Plug](#vim-plug)
 - [Windows](#windows)
-  - [Configuration file on Windows](#configuration-file-on-windows)
+  - [Configuration file of application on Windows](#configuration-file-of-application-on-windows)
     - [Configuration of Windows terminal](#configuration-of-windows-terminal)
     - [Configuration of PowerShell](#configuration-of-powershell)
   - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
@@ -38,7 +38,7 @@ This section contains the script to install applications, their configuration fi
 
 The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, Lazyvim.
 
-#### Configuration file on Linux
+#### Configuration file of application on Linux
 
 ##### Configuration of shell
 
@@ -183,7 +183,7 @@ We input the following commands in vim, and press Enter
   
 ### Windows
 
-#### Configuration file on Windows
+#### Configuration file of application on Windows
 
 ##### Configuration of Windows terminal
 
