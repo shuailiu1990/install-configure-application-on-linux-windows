@@ -21,8 +21,8 @@
   - [Configuration file of application on Windows](#configuration-file-of-application-on-windows)
     - [Configuration of Windows terminal](#configuration-of-windows-terminal)
     - [Configuration of PowerShell](#configuration-of-powershell)
+    - [Configuration of WSL2](#configuration-of-wsl2)
   - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
-  - [Configuration of WSL2](#configuration-of-wsl2)
   - [Uninstall Linux distribution on WSL2](#uninstall-linux-distribution-on-wsl2)
   - [Install Nerd Font](#install-nerd-font)
   - [Install StarShip](#install-starship)
@@ -207,6 +207,14 @@ C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
 C:\User\UserName\.config\starship.toml
 ```
 
+##### Configuration of WSL2
+
+.wslconfig is the configuration file of WSL2. The resource limit of WSL2 on Windows can be set in .wslconfig, e.g., the memory and number of CPU core. The file .wslconfig is on the following directory on Windows
+
+```
+C:\Users\UserName
+```
+
 #### Install WSL2 and Linux distribution on it
 
 1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
@@ -258,14 +266,6 @@ wsl --install -d xxx
 ```
 
 where xxx is a Linux distribution, e.g., Ubuntu-20.04
-
-#### Configuration of WSL2
-
-.wslconfig is the configuration file of WSL2. The resource limit of WSL2 on Windows can be set in .wslconfig, e.g., the memory and number of CPU core. The file .wslconfig is on the following directory on Windows
-
-```
-C:\Users\UserName
-```
 
 #### Uninstall Linux distribution on WSL2
 
