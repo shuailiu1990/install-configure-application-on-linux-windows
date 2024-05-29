@@ -35,7 +35,7 @@
 
 ##### Install application on Ubuntu
 
-The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.
+The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, Lazyvim.
 
 #### Backup of configuration file on Linux
 
