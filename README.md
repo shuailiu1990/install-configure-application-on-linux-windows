@@ -27,6 +27,8 @@
   - [Install Nerd Font](#install-nerd-font)
   - [Install StarShip](#install-starship)
   - [Install and configure Zotero](#install-and-configure-zotero)
+  - [Powershell](#powershell)
+    - [Remote login SSH key authentication guidelines](#remote-login-ssh-key-authentication-guidelines)
 
 ### Linux
 
@@ -326,6 +328,15 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
    <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-2.png" width="550px" height="300px">
 6. Install the Zotero Plugin PDF Translate as the procedures above.
 
+#### Powershell
+##### Remote login SSH key authentication guidelines
+
+1. Generate SSH key pairs on Powershell
+   ```
+   ssh-keygen
+   ```
+2. Copy the public key in ~/.ssh/id_rsa.pub to ~/.ssh/authorized_keys on the remote server
+3. ssh username@hostname on Powershell
 
 
 
