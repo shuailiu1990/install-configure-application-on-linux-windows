@@ -5,39 +5,42 @@
 - [Linux](#linux)
   - [Script to install application](#script-to-install-application)
     - [Install application on Ubuntu](#install-application-on-ubuntu)
-  - [Backup of configuration file on Linux](#backup-of-configuration-file-on-linux)
+  - [Configuration file of application on Linux](#configuration-file-of-application-on-linux)
     - [Configuration of shell](#configuration-of-shell)
     - [Configuration of Neovim](#configuration-of-neovim)
     - [Configuration of vim](#configuration-of-vim)
     - [Configuration of tmux](#configuration-of-tmux)
     - [Path of application](#path-of-application)
-- [Windows](#windows)
-  - [Backup of configuration file on Windows](#backup-of-configuration-file-on-windows)
-    - [Configuration of Windows terminal](#configuration-of-windows-terminal)
-    - [Configuration of PowerShell](#configuration-of-powershell)
-  - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
-  - [Configuration of WSL2](#configuration-of-wsl2)
-  - [Uninstall Linux distribution on WSL2](#uninstall-linux-distribution-on-wsl2)
-  - [Install Nerd Font](#install-nerd-font)
-  - [Install StarShip](#install-starship)
-  - [Install and configure Zotero](#install-and-configure-zotero)
-- [Application Manual](#application-manual)
   - [Jupyter notebook](#jupyter-notebook)
     - [Vist Jupyter notebook on remote server via local browser](#vist-jupyter-notebook-on-remote-server-via-local-browser)
   - [Git](#git)
   - [GitHub](#github)
     - [Add public key on Linux into GitHub](#add-public-key-on-linux-into-github)
   - [Vim-Plug](#vim-plug)
+- [Windows](#windows)
+  - [Configuration file of application on Windows](#configuration-file-of-application-on-windows)
+    - [Configuration of Windows terminal](#configuration-of-windows-terminal)
+    - [Configuration of PowerShell](#configuration-of-powershell)
+    - [Configuration of WSL2](#configuration-of-wsl2)
+  - [Install WSL2 and Linux distribution on it](#install-wsl2-and-linux-distribution-on-it)
+  - [Uninstall Linux distribution on WSL2](#uninstall-linux-distribution-on-wsl2)
+  - [Install Nerd Font](#install-nerd-font)
+  - [Install StarShip](#install-starship)
+  - [Install and configure Zotero](#install-and-configure-zotero)
+  - [Powershell](#powershell)
+    - [Remote login SSH key authentication guidelines](#remote-login-ssh-key-authentication-guidelines)
 
 ### Linux
+
+This section contains the script to install applications, their configuration files, and the ways to set up them.
 
 #### Script to install application
 
 ##### Install application on Ubuntu
 
-The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, vim-plug.
+The script install-configure-application-on-ubuntu.sh can be used to install applications and their plugins automatically on Ubuntu/Debian, e.g., zsh, oh my zsh, Lazyvim.
 
-#### Backup of configuration file on Linux
+#### Configuration file of application on Linux
 
 ##### Configuration of shell
 
@@ -69,154 +72,6 @@ source ~/profile.d/xxx.sh
 
 where xxx is the name of application.
 
-### Windows
-
-#### Backup of configuration file on Windows
-
-##### Configuration of Windows terminal
-
-settings.json is the configuration file of Windows terminal on
-
-```
-C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
-```
-
-##### Configuration of PowerShell
-
-```
-C:\User\UserName\.ssh\config
-```
-
-```
-C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
-```
-##### Configuration of Starship
-```
-C:\User\UserName\.config\starship.toml
-```
-
-#### Install WSL2 and Linux distribution on it
-
-1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
-
-2. 以**管理员身份**打开**Windows PowerShell**, 然后依次执行以下3-7步骤
-
-3. Set default version of WSL to 2, i.e., WSL2
-
-```
-wsl --set-default-version 2
-```
-
-4. Update WSL
-
-```
-wsl --update
-```
-
-or
-
-```
-wsl --update --pre-release
-```
-
-如果更新失败，在Windows更新选项中打开**接收其它Microsoft产品的更新**
-
-5. Install WSLg
-
-```
-wsl --install
-```
-
-6. List all the Linux distributions avaiable
-
-```
-wsl --list --online
-```
-
-or
-
-```
-wsl -l -o
-```
-
-7. Install a Linux distribution
-
-```
-wsl --install -d xxx
-```
-
-where xxx is a Linux distribution, e.g., Ubuntu-20.04
-
-#### Configuration of WSL2
-
-.wslconfig is the configuration file of WSL2. The resource limit of WSL2 on Windows can be set in .wslconfig, e.g., the memory and number of CPU core. The file .wslconfig is on the following directory on Windows
-
-```
-C:\Users\UserName
-```
-
-#### Uninstall Linux distribution on WSL2
-
-The Linux distribution is represented by **xxx**
-
-1. Open PowerShell
-2. ```
-   wsl --terminate xxx
-   ```
-
-3. ```
-   wsl --unregister xxx
-   ```
-4. Delete all the files on Linux, the files are on
-   ```
-   C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
-   ```
-
-#### Install Nerd Font
-
-1. Download Nerd Font from **Download Zip** of **Code** on https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
-2. Open PowerShell
-3. ```
-   ./install.ps1
-   ```
-
-#### Install StarShip
-
-https://www.jianshu.com/p/1b547035f839
-https://juejin.cn/post/7122814751603687438
-https://starship.rs/config/#prompt
-
-#### Install and configure Zotero
-
-The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
-
-1. Download Zotero and Zotero Connector
-   
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png" width="500px">
-2. On the website of Nutstore, add Zotero on **Security** of **Settings**
-    
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-add-app-nutstore.png" width="1000px">
-3. Open Zotero, set up items on **同步** of **首选项** of **编辑**
-
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-zotero.png" width="500px">
-4. 将**C:\Users\刘帅**中的**Zotero文件夹**同步到Nutstore
-
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-fold-zotero.jpg" width="500px">
-5. Install the Zotero plugin Zotfile
-   Search the plugin Zotfile on the website https://www.zotero.org/support/plugins, download the .xpi file and install it as below
-   
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-1.png" width="400px">  
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-2.png" width="550px" height="300px">
-   
-   After the installation, we should check its settings as below
-   
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-1.png" width="400px">  
-   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-2.png" width="550px" height="300px">
-6. Install the Zotero Plugin PDF Translate as the procedures above.
-
-
-### Application Manual
-
 #### Jupyter notebook
 ##### Vist Jupyter notebook on remote server via local browser
 1. The first method: 通过SSH远程使用Jupyter notebook
@@ -237,6 +92,7 @@ The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
     jupyter notebook --generate-config
     ```
     (2). Generate访问密码
+   
     Input **ipython** in the command line, 然后通过输入以下命令设置为Jupyter访问密码, e.g., 235711131719.
     ```
     from notebook.auth import passwd
@@ -326,3 +182,162 @@ We input the following commands in vim, and press Enter
   ```
   :PlugStatus
   ```
+  
+### Windows
+
+#### Configuration file of application on Windows
+
+##### Configuration of Windows terminal
+
+settings.json is the configuration file of Windows terminal on
+
+```
+C:\Users\UserName\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+```
+
+##### Configuration of PowerShell
+
+```
+C:\User\UserName\.ssh\config
+```
+
+```
+C:\Users\刘帅\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+```
+##### Configuration of Starship
+```
+C:\User\UserName\.config\starship.toml
+```
+
+##### Configuration of WSL2
+
+.wslconfig is the configuration file of WSL2. The resource limit of WSL2 on Windows can be set in .wslconfig, e.g., the memory and number of CPU core. The file .wslconfig is on the following directory on Windows
+
+```
+C:\Users\UserName
+```
+
+#### Install WSL2 and Linux distribution on it
+
+1. 在Windows搜索框中搜索**启用或关闭Windows功能**，然后开启**适用于Linux的Windows子系统**和**虚拟机平台**，最后reboot Windows
+
+2. 以**管理员身份**打开**Windows PowerShell**, 然后依次执行以下3-7步骤
+
+3. Set default version of WSL to 2, i.e., WSL2
+
+```
+wsl --set-default-version 2
+```
+
+4. Update WSL
+
+```
+wsl --update
+```
+
+or
+
+```
+wsl --update --pre-release
+```
+
+如果更新失败，在Windows更新选项中打开**接收其它Microsoft产品的更新**
+
+5. Install WSLg
+
+```
+wsl --install
+```
+
+6. List all the Linux distributions avaiable
+
+```
+wsl --list --online
+```
+
+or
+
+```
+wsl -l -o
+```
+
+7. Install a Linux distribution
+
+```
+wsl --install -d xxx
+```
+
+where xxx is a Linux distribution, e.g., Ubuntu-20.04
+
+#### Uninstall Linux distribution on WSL2
+
+The Linux distribution is represented by **xxx**
+
+1. Open PowerShell
+2. ```
+   wsl --terminate xxx
+   ```
+
+3. ```
+   wsl --unregister xxx
+   ```
+4. Delete all the files on Linux, the files are on
+   ```
+   C:\Users\UserName\AppData\Local\Packages\yyy.xxx.zzz
+   ```
+
+#### Install Nerd Font
+
+1. Download Nerd Font from **Download Zip** of **Code** on https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
+2. Open PowerShell
+3. ```
+   ./install.ps1
+   ```
+
+#### Install StarShip
+
+https://www.jianshu.com/p/1b547035f839
+https://juejin.cn/post/7122814751603687438
+https://starship.rs/config/#prompt
+
+#### Install and configure Zotero
+
+The reference link: https://www.bilibili.com/video/BV1kr4y1k79h/
+
+1. Download Zotero and Zotero Connector
+   
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-download-zotero-zotero-connector.png" width="500px">
+2. On the website of Nutstore, add Zotero on **Security** of **Settings**
+    
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-add-app-nutstore.png" width="1000px">
+3. Open Zotero, set up items on **同步** of **首选项** of **编辑**
+
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-zotero.png" width="500px">
+4. 将**C:\Users\刘帅**中的**Zotero文件夹**同步到Nutstore
+
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-sync-fold-zotero.jpg" width="500px">
+5. Install the Zotero plugin Zotfile
+   Search the plugin Zotfile on the website https://www.zotero.org/support/plugins, download the .xpi file and install it as below
+   
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-1.png" width="400px">  
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-install-zotfile-2.png" width="550px" height="300px">
+   
+   After the installation, we should check its settings as below
+   
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-1.png" width="400px">  
+   <img src="https://github.com/shuailiu1990/install-configure-application-on-linux-windows/blob/main/figure/screenshot-setting-zotfile-2.png" width="550px" height="300px">
+6. Install the Zotero Plugin PDF Translate as the procedures above.
+
+#### Powershell
+##### Remote login SSH key authentication guidelines
+
+1. Generate SSH key pairs on Powershell
+   ```
+   ssh-keygen
+   ```
+2. Copy the public key in ~/.ssh/id_rsa.pub to ~/.ssh/authorized_keys on the remote server
+3. ssh username@hostname on Powershell
+
+
+
+
