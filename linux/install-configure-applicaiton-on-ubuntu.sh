@@ -9,14 +9,13 @@ if [ ! -d ~/opt ]; then
 fi
 
 #--------    Update software   --------
-
 read -p "Update software with sudo? (y/n):" flag_update_software_with_sudo
 if [ $flag_update_software_with_sudo = "y" ]; then
     sudo apt update &&
         sudo apt upgrade &&
         echo -e "\033[31m Update software successuflly! \033[0m"
 else
-    echo Software update is skipped!
+    echo -e "\033[31m Software update is skipped! \033[0m"
 fi
 
 #--------    Neovim   --------
@@ -30,7 +29,7 @@ if [ $flag_install_neovim = "y" ]; then
         tar -xf nvim-linux64.tar.gz -C ~/opt/nvim --strip-components 1 &&
         echo -e "\033[31m Install Neovim successuflly! \033[0m"
 else
-    echo Neovim installation is skipped!
+    echo -e "\033[31m Neovim installation is skipped! \033[0m"
 fi
 
 #--------    Lazyvim   --------
@@ -40,12 +39,11 @@ if [ $flag_install_lazyvim = "y" ]; then
         git clone https://github.com/LazyVim/starter ~/.config/nvim &&
         echo -e "\033[31m Install Lazyvim successuflly! \033[0m"
 else
-    echo Lazyvim installation is skipped!
+    echo -e "\033[31m Lazyvim installation is skipped! \033[0m"
 fi
 
 #--------    zsh    --------
 # The reference link: https://phoenixnap.com/kb/install-zsh-ubuntu, https://gist.github.com/n1snt/454b879b8f0b7995740ae04c5fb5b7df
-
 if ! which zsh 1>/dev/null 2>&1; then
     echo -e "\033[31m zsh is not installed! \033[0m"
 
@@ -89,7 +87,6 @@ fi
 # Note that the configrations on zsh are in the file ~/.zshrc. The configrations (e.g., path) in .bashrc need to be copied to .zshrc.
 
 #--------    oh my zsh     --------
-
 if [ ! -d ~/.oh-my-zsh ]; then
     echo oh my zsh is not installed!
 
@@ -115,7 +112,6 @@ else
 fi
 
 #--------    Plugin of oh my zsh     --------
-
 # Enter the decision to determine whether to install plugins of oh my zsh in command line
 read -p "Install plugins of oh my zsh? (y/n):" flag_install_plugins_of_oh_my_zsh
 
