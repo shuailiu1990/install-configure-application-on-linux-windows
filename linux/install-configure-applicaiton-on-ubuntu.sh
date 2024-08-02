@@ -150,6 +150,19 @@ else
     echo oh my tmux installation is skipped!
 fi
 
+#--------    fzf     --------
+read -p "Install fzf? (y/n):" flag_install_oh_my_tmux
+
+if [ flag_install_fzf = "y" ]; then
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &&
+        ~/.fzf/install &&
+        cd ~/.fzf &&
+        git pull &&
+        ./install &&
+        echo fzf is installed and updated successfully!
+else
+    echo fzf installation is skipped!
+fi
 #--------    Compelling environment  --------
 
 # Install autoconf
